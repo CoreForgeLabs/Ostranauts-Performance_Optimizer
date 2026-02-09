@@ -8,7 +8,7 @@
 <h1 align="center">⚡ Ostranauts Performance Optimizer</h1>
 
 <p align="center">
-  <b>Eliminates freezes at 16x speed | Убирает фризы на 16x скорости</b>
+  <b>Eliminates microfreezes | Убирает микрофризы</b>
 </p>
 
 <p align="center">
@@ -24,7 +24,7 @@
 
 ### What this mod does
 
-Eliminates periodic **0.5–1.5 second freezes** caused by Unity/Mono garbage collector (GC) during accelerated time (**16x speed**).
+Eliminates periodic **0.5–1.5 second freezes** caused by Unity/Mono garbage collector (GC).
 
 **Without mod:** GC triggers every ~5 seconds → constant stuttering  
 **With mod:** GC triggers every ~50–100 seconds → smooth gameplay
@@ -103,7 +103,7 @@ After the first launch, a config file appears at:
 
 ### Что делает мод
 
-Устраняет периодические **фризы 0.5–1.5 секунды**, вызванные сборщиком мусора (GC) Unity/Mono при ускоренном времени (**16x скорость**).
+Устраняет периодические **фризы 0.5–1.5 секунды**, вызванные сборщиком мусора (GC) Unity/Mono.
 
 **Без мода:** GC срабатывает каждые ~5 секунд → постоянные подвисания  
 **С модом:** GC срабатывает каждые ~50–100 секунд → плавный геймплей
