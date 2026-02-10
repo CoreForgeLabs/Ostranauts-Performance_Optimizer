@@ -552,19 +552,22 @@ namespace SaveForce
                 SaveForcePlugin.s_dictFilesRef = null;
             }
 
-            var gcSw = Stopwatch.StartNew();
-            GC.Collect();
-            GC.WaitForPendingFinalizers();
-            GC.Collect();
-            gcSw.Stop();
-            SaveForcePlugin.Log.LogInfo("[OPT] Pre-spawn GC: " + gcSw.ElapsedMilliseconds + " ms");
-
-            SaveForcePlugin.sw_SystemInit.Start();
+            if (SaveForcePlugin.s_isLoading)
+            {
+                var gcSw = Stopwatch.StartNew();
+                GC.Collect();
+                GC.WaitForPendingFinalizers();
+                GC.Collect();
+                gcSw.Stop();
+                SaveForcePlugin.Log.LogInfo("[OPT] Pre-spawn GC: " + gcSw.ElapsedMilliseconds + " ms");
+    
+                SaveForcePlugin.sw_SystemInit.Start();
+            }
         }
 
         static void Postfix(ref IEnumerator __result)
         {
-            if (SaveForcePlugin.CfgReduceYields.Value)
+            if (SaveForcePlugin.CfgReduceYields.Value && SaveForcePlugin.s_isLoading)
                 __result = new BatchedEnumerator(__result, SaveForcePlugin.CfgYieldBatchSize.Value);
         }
     }

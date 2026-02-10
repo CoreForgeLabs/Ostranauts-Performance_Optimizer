@@ -1,0 +1,2238 @@
+[Message:   BepInEx] BepInEx 5.4.23.5 - Ostranauts (2/9/2026 5:19:15 AM)
+[Info   :   BepInEx] Running under Unity v5.6.7.15207619
+[Info   :   BepInEx] CLR runtime version: 2.0.50727.1433
+[Info   :   BepInEx] Supports SRE: True
+[Info   :   BepInEx] System platform: Bits64, Windows
+[Message:   BepInEx] Preloader started
+[Info   :   BepInEx] Loaded 1 patcher method from [BepInEx.Preloader 5.4.23.5]
+[Info   :   BepInEx] 1 patcher plugin loaded
+[Info   :   BepInEx] Patching [UnityEngine] with [BepInEx.Chainloader]
+[Message:   BepInEx] Preloader finished
+[Warning:  HarmonyX] AccessTools.Property: Could not find property for type UnityEngine.Application and name isBatchMode
+[Message:   BepInEx] Chainloader ready
+[Message:   BepInEx] Chainloader started
+[Info   :   BepInEx] 1 plugin to load
+[Info   :   BepInEx] Loading [Ostranauts Performance Optimizer 7.5.0]
+[Info   :Ostranauts Performance Optimizer] [CFG] maxDT: 0.3333333->0.1
+[Info   :Ostranauts Performance Optimizer] [MONO] heap=43MB used=14MB
+[Info   :Ostranauts Performance Optimizer]   [OK] Patch_AdvanceSim
+[Info   :Ostranauts Performance Optimizer]   [OK] Patch_UpdateICOs
+[Info   :Ostranauts Performance Optimizer]   [OK] Patch_EndTurn
+[Info   :Ostranauts Performance Optimizer]   [OK] Patch_GetMove2
+[Info   :Ostranauts Performance Optimizer]   [OK] Patch_GetWork
+[Info   :Ostranauts Performance Optimizer]   [OK] Patch_ParseCondLoot
+[Info   :Ostranauts Performance Optimizer]   [OK] Patch_StarSystemUpdate
+[Info   :Ostranauts Performance Optimizer]   [OK] Patch_Cleanup
+[Info   :Ostranauts Performance Optimizer]   [OK] Patch_FirstOrDefault
+[Info   :Ostranauts Performance Optimizer]   [OK] Patch_UpdateStats
+[Info   :Ostranauts Performance Optimizer]   [OK] Patch_SuppressInteractionLog
+[Info   :Ostranauts Performance Optimizer] === Optimizer v7.5.0 (11/11 patches) ===
+[Info   :Ostranauts Performance Optimizer]   FirstOrDefault=True InteractionLog=True FrameBudget=12 MaxSimSteps=50 MaxDeltaTime=0.1 HeapExpansion=1024MB
+[Message:   BepInEx] Chainloader startup complete
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 176.8ms [GCx4] Sim:0 [PAUSED]
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 72.5ms [GCx1] Sim:0 [PAUSED]
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=False paused=True TimeScale=1 Sim=0
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 202 (0act) FPS:711 Worst:176.8ms
+  Sp:2 (2gc) GC:49 M:404MB
+  MH:507MB MU:403MB F:103MB
+  Sim:0 (0.0/f) Max:0
+  AS  --
+  ICO --
+  ET  --
+  GM2 --
+  GW  --
+  PCL --
+  CU  --
+  US  --
+  SS  --
+
+  Alloc:22492KB/5s (4498KB/s)
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 1299.6ms [GCx2] Sim:0 [PAUSED]
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 53.7ms Sim:0 [PAUSED]
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 173.9ms Sim:0 [PAUSED]
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=False paused=True TimeScale=1 Sim=0
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 203 (0act) FPS:129 Worst:1299.6ms
+  Sp:3 (1gc) GC:3 M:347MB
+  MH:507MB MU:346MB F:161MB
+  Sim:0 (0.0/f) Max:0
+  AS  --
+  ICO --
+  ET  --
+  GM2 --
+  GW  --
+  PCL --
+  CU  --
+  US  --
+  SS  --
+
+  Alloc:2856KB/5s (571KB/s)
+=================
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=False paused=True TimeScale=1 Sim=0
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 302 (0act) FPS:9692 Worst:0.5ms
+  Sp:0 (0gc) GC:0 M:347MB
+  MH:507MB MU:346MB F:161MB
+  Sim:0 (0.0/f) Max:0
+  AS  --
+  ICO --
+  ET  --
+  GM2 --
+  GW  --
+  PCL --
+  CU  --
+  US  --
+  SS  --
+
+  Alloc:8KB/5s (2KB/s)
+=================
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=False paused=True TimeScale=1 Sim=0
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 302 (0act) FPS:8295 Worst:3.8ms
+  Sp:0 (0gc) GC:0 M:347MB
+  MH:507MB MU:346MB F:161MB
+  Sim:0 (0.0/f) Max:0
+  AS  --
+  ICO --
+  ET  --
+  GM2 --
+  GW  --
+  PCL --
+  CU  --
+  US  --
+  SS  --
+
+  Alloc:12KB/5s (2KB/s)
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 1471.7ms [GCx4] Sim:0 [PAUSED]
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 50.9ms Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 10125.3ms [GCx6] Sim:0
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=False paused=False TimeScale=1 Sim=0
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 82 (4act) FPS:7 Worst:10125.3ms
+  Sp:3 (2gc) GC:12 M:896MB
+  MH:1126MB MU:896MB F:230MB
+  Sim:0 (0.0/f) Max:0
+  AS  --
+  ICO --
+  ET  --
+  GM2 --
+  GW  --
+  PCL --
+  CU  --
+  US  --
+  SS  --
+
+  Alloc:4612KB/5s (922KB/s)
+=================
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=False paused=False TimeScale=1 Sim=0
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 301 (301act) FPS:1841 Worst:7.1ms
+  Sp:0 (0gc) GC:0 M:897MB
+  MH:1126MB MU:896MB F:229MB
+  Sim:0 (0.0/f) Max:0
+  AS  --
+  ICO --
+  ET  --
+  GM2 --
+  GW  --
+  PCL --
+  CU  --
+  US  --
+  SS  --
+
+  Alloc:792KB/5s (158KB/s)
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 50.3ms Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 296.2ms Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 110.9ms Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 137.4ms Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 294.3ms Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 131.6ms Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 43.3ms Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 43.4ms Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 39.7ms Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 245.1ms Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 274.3ms [GCx1] Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 61.0ms Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 156.1ms Sim:0
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=False paused=False TimeScale=1 Sim=0
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 201 (201act) FPS:98 Worst:296.2ms
+  Sp:13 (1gc) GC:1 M:1072MB
+  MH:1286MB MU:1072MB F:214MB
+  Sim:0 (0.0/f) Max:0
+  AS  --
+  ICO --
+  ET  --
+  GM2 --
+  GW  --
+  PCL --
+  CU  --
+  US  --
+  SS  --
+
+  Alloc:521532KB/5s (104306KB/s)
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 50.3ms Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 80.6ms Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 383.1ms Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 39.7ms Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 45.9ms Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 47.9ms Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 34.0ms Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 36.2ms Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 47.7ms Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 99.8ms Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 265.5ms [GCx1] Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 34.4ms Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 44.3ms Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 39.6ms Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 401.4ms Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 39.8ms Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 34.6ms Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 39.7ms Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 41.9ms Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 70.6ms Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 90.8ms Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 39.9ms Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 61.8ms Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 724.1ms [GCx1] Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 230.2ms Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 387.9ms Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 132.5ms Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 345.8ms Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 456.4ms [GCx1] Sim:0
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=False paused=False TimeScale=1 Sim=0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 264.6ms Sim:0
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 64 (64act) FPS:13 Worst:724.1ms
+  Sp:30 (3gc) GC:3 M:1283MB
+  MH:1286MB MU:1283MB F:3MB
+  Sim:0 (0.0/f) Max:0
+  AS  --
+  ICO --
+  ET  --
+  GM2 --
+  GW  --
+  PCL --
+  CU  --
+  US  --
+  SS  --
+
+  Alloc:684284KB/5s (136857KB/s)
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 477.5ms [GCx1] Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 108.3ms Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 106.5ms Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 91.8ms Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 52.2ms Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 92.7ms Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 43.7ms Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 1712.6ms [GCx2] Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 48.6ms Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 1827.2ms [GCx2] Sim:0
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=False paused=False TimeScale=1 Sim=0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 53.5ms Sim:0
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 18 (18act) FPS:4 Worst:1827.2ms
+  Sp:11 (3gc) GC:5 M:1490MB
+  MH:1494MB MU:1490MB F:4MB
+  Sim:0 (0.0/f) Max:0
+  AS  --
+  ICO --
+  ET  --
+  GM2 --
+  GW  --
+  PCL --
+  CU  --
+  US  --
+  SS  --
+
+  Alloc:120648KB/5s (24130KB/s)
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 84.1ms Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 114.5ms Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 114.6ms Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 810.3ms [GCx1] Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 2032.1ms [GCx2] Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 1192.4ms Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 47.3ms Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 742.6ms Sim:0
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=False paused=False TimeScale=1 Sim=0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 473.7ms Sim:0
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 10 (10act) FPS:2 Worst:2032.1ms
+  Sp:9 (2gc) GC:3 M:2071MB
+  MH:2086MB MU:2071MB F:15MB
+  Sim:0 (0.0/f) Max:0
+  AS  --
+  ICO --
+  ET  --
+  GM2 --
+  GW  --
+  PCL --
+  CU  --
+  US  --
+  SS  --
+
+  Alloc:495876KB/5s (99175KB/s)
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 36.2ms Sim:0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 11130.3ms [GCx4] Sim:0
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=False paused=False TimeScale=1 Sim=0
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 54.8ms Sim:0
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 4 (4act) FPS:0 Worst:11130.3ms
+  Sp:3 (1gc) GC:4 M:2324MB
+  MH:2374MB MU:2324MB F:50MB
+  Sim:0 (0.0/f) Max:0
+  AS  --
+  ICO --
+  ET  --
+  GM2 --
+  GW  --
+  PCL --
+  CU  --
+  US  --
+  SS  --
+
+  Alloc:15764KB/5s (3153KB/s)
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 1007.3ms Sim:0
+[Info   :Ostranauts Performance Optimizer] [GAME] StarSystem.Update — loaded
+[Info   :Ostranauts Performance Optimizer] [HEAP] Expanding by ~1024MB...
+[Info   :Ostranauts Performance Optimizer] [HEAP] Before: H=2374MB U=2334MB F=40MB
+[Info   :Ostranauts Performance Optimizer] [HEAP] After:  H=3462MB U=2320MB Free=1141MB
+[Info   :Ostranauts Performance Optimizer] [HEAP] Expanded by +1088MB. Expected GC interval: ~228s at 5MB/s alloc rate
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 1945.6ms [GCx2] Sim:0 [PAUSED]
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=True TimeScale=1 Sim=0
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 191 (6act) FPS:59 Worst:1945.6ms
+  Sp:2 (1gc) GC:2 M:2321MB
+  MH:3462MB MU:2320MB F:1141MB
+  Sim:0 (0.0/f) Max:0
+  AS  --
+  ICO 1x 1.6ms (1.6ms/c)
+  ET  --
+  GM2 --
+  GW  --
+  PCL --
+  CU  --
+  US  225x 0.4ms (0.002ms/c)
+  SS  184x 30.5ms (0.166ms/c)
+
+  Alloc:8088KB/5s (1618KB/s)
+  A.AS:0KB A.SS:16KB A.Oth:8072KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=True TimeScale=1 Sim=0
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 301 (0act) FPS:1026 Worst:2.8ms
+  Sp:0 (0gc) GC:0 M:2321MB
+  MH:3462MB MU:2321MB F:1141MB
+  Sim:0 (0.0/f) Max:0
+  AS  --
+  ICO --
+  ET  --
+  GM2 --
+  GW  --
+  PCL --
+  CU  --
+  US  --
+  SS  301x 46.4ms (0.154ms/c)
+
+  Alloc:280KB/5s (56KB/s)
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=True TimeScale=1 Sim=0
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 301 (0act) FPS:913 Worst:1.4ms
+  Sp:0 (0gc) GC:0 M:2322MB
+  MH:3462MB MU:2321MB F:1140MB
+  Sim:0 (0.0/f) Max:0
+  AS  --
+  ICO --
+  ET  --
+  GM2 --
+  GW  --
+  PCL --
+  CU  --
+  US  --
+  SS  301x 52.0ms (0.173ms/c)
+
+  Alloc:320KB/5s (64KB/s)
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=True TimeScale=1 Sim=0
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 300 (0act) FPS:829 Worst:2.7ms
+  Sp:0 (0gc) GC:0 M:2322MB
+  MH:3462MB MU:2322MB F:1140MB
+  Sim:0 (0.0/f) Max:0
+  AS  --
+  ICO --
+  ET  --
+  GM2 --
+  GW  --
+  PCL --
+  CU  --
+  US  --
+  SS  300x 55.7ms (0.186ms/c)
+
+  Alloc:424KB/5s (85KB/s)
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=True TimeScale=1 Sim=0
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 300 (0act) FPS:845 Worst:1.5ms
+  Sp:0 (0gc) GC:0 M:2323MB
+  MH:3462MB MU:2322MB F:1139MB
+  Sim:0 (0.0/f) Max:0
+  AS  --
+  ICO --
+  ET  --
+  GM2 --
+  GW  --
+  PCL --
+  CU  --
+  US  --
+  SS  300x 55.8ms (0.186ms/c)
+
+  Alloc:460KB/5s (92KB/s)
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=True TimeScale=1 Sim=0
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 300 (0act) FPS:836 Worst:2.5ms
+  Sp:0 (0gc) GC:0 M:2323MB
+  MH:3462MB MU:2323MB F:1139MB
+  Sim:0 (0.0/f) Max:0
+  AS  --
+  ICO --
+  ET  --
+  GM2 --
+  GW  --
+  PCL --
+  CU  --
+  US  --
+  SS  300x 56.1ms (0.187ms/c)
+
+  Alloc:576KB/5s (115KB/s)
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=True TimeScale=1 Sim=0
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 301 (0act) FPS:915 Worst:1.8ms
+  Sp:0 (0gc) GC:0 M:2324MB
+  MH:3462MB MU:2324MB F:1138MB
+  Sim:0 (0.0/f) Max:0
+  AS  --
+  ICO --
+  ET  --
+  GM2 --
+  GW  --
+  PCL --
+  CU  --
+  US  --
+  SS  301x 52.4ms (0.174ms/c)
+
+  Alloc:684KB/5s (137KB/s)
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=True TimeScale=1 Sim=0
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 300 (0act) FPS:957 Worst:1.5ms
+  Sp:0 (0gc) GC:0 M:2325MB
+  MH:3462MB MU:2325MB F:1137MB
+  Sim:0 (0.0/f) Max:0
+  AS  --
+  ICO --
+  ET  --
+  GM2 --
+  GW  --
+  PCL --
+  CU  --
+  US  --
+  SS  300x 50.1ms (0.167ms/c)
+
+  Alloc:860KB/5s (172KB/s)
+  A.AS:0KB A.SS:20KB A.Oth:840KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=True TimeScale=1 Sim=0
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 300 (0act) FPS:847 Worst:1.5ms
+  Sp:0 (0gc) GC:0 M:2326MB
+  MH:3462MB MU:2326MB F:1136MB
+  Sim:0 (0.0/f) Max:0
+  AS  --
+  ICO --
+  ET  --
+  GM2 --
+  GW  --
+  PCL --
+  CU  --
+  US  --
+  SS  300x 56.0ms (0.187ms/c)
+
+  Alloc:800KB/5s (160KB/s)
+  A.AS:0KB A.SS:64KB A.Oth:736KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=True TimeScale=1 Sim=0
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 300 (0act) FPS:853 Worst:1.6ms
+  Sp:0 (0gc) GC:0 M:2327MB
+  MH:3462MB MU:2327MB F:1135MB
+  Sim:0 (0.0/f) Max:0
+  AS  --
+  ICO --
+  ET  --
+  GM2 --
+  GW  --
+  PCL --
+  CU  --
+  US  --
+  SS  300x 55.5ms (0.185ms/c)
+
+  Alloc:824KB/5s (165KB/s)
+  A.AS:0KB A.SS:48KB A.Oth:776KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=True TimeScale=1 Sim=0
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 299 (0act) FPS:847 Worst:2.8ms
+  Sp:0 (0gc) GC:0 M:2328MB
+  MH:3462MB MU:2328MB F:1134MB
+  Sim:0 (0.0/f) Max:0
+  AS  --
+  ICO --
+  ET  --
+  GM2 --
+  GW  --
+  PCL --
+  CU  --
+  US  --
+  SS  299x 57.1ms (0.191ms/c)
+
+  Alloc:836KB/5s (167KB/s)
+  A.AS:0KB A.SS:84KB A.Oth:752KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=True TimeScale=1 Sim=0
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 301 (0act) FPS:896 Worst:1.5ms
+  Sp:0 (0gc) GC:0 M:2329MB
+  MH:3462MB MU:2329MB F:1133MB
+  Sim:0 (0.0/f) Max:0
+  AS  --
+  ICO --
+  ET  --
+  GM2 --
+  GW  --
+  PCL --
+  CU  --
+  US  --
+  SS  301x 53.1ms (0.176ms/c)
+
+  Alloc:1124KB/5s (225KB/s)
+  A.AS:0KB A.SS:48KB A.Oth:1076KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=True TimeScale=1 Sim=0
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 301 (0act) FPS:1028 Worst:2.1ms
+  Sp:0 (0gc) GC:0 M:2330MB
+  MH:3462MB MU:2330MB F:1132MB
+  Sim:0 (0.0/f) Max:0
+  AS  --
+  ICO --
+  ET  --
+  GM2 --
+  GW  --
+  PCL --
+  CU  --
+  US  --
+  SS  301x 47.2ms (0.157ms/c)
+
+  Alloc:732KB/5s (146KB/s)
+  A.AS:0KB A.SS:36KB A.Oth:696KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=True TimeScale=1 Sim=0
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 301 (0act) FPS:1049 Worst:1.4ms
+  Sp:0 (0gc) GC:0 M:2331MB
+  MH:3462MB MU:2331MB F:1131MB
+  Sim:0 (0.0/f) Max:0
+  AS  --
+  ICO --
+  ET  --
+  GM2 --
+  GW  --
+  PCL --
+  CU  --
+  US  --
+  SS  301x 46.5ms (0.154ms/c)
+
+  Alloc:956KB/5s (191KB/s)
+  A.AS:0KB A.SS:72KB A.Oth:884KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=True TimeScale=1 Sim=0
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 300 (0act) FPS:986 Worst:1.4ms
+  Sp:0 (0gc) GC:0 M:2332MB
+  MH:3462MB MU:2332MB F:1130MB
+  Sim:0 (0.0/f) Max:0
+  AS  --
+  ICO --
+  ET  --
+  GM2 --
+  GW  --
+  PCL --
+  CU  --
+  US  --
+  SS  300x 49.0ms (0.163ms/c)
+
+  Alloc:772KB/5s (154KB/s)
+  A.AS:0KB A.SS:56KB A.Oth:716KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=True TimeScale=1 Sim=0
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 300 (0act) FPS:853 Worst:1.5ms
+  Sp:0 (0gc) GC:0 M:2333MB
+  MH:3462MB MU:2333MB F:1129MB
+  Sim:0 (0.0/f) Max:0
+  AS  --
+  ICO --
+  ET  --
+  GM2 --
+  GW  --
+  PCL --
+  CU  --
+  US  --
+  SS  300x 55.6ms (0.185ms/c)
+
+  Alloc:768KB/5s (154KB/s)
+  A.AS:0KB A.SS:64KB A.Oth:704KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=True TimeScale=1 Sim=0
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 300 (0act) FPS:851 Worst:1.4ms
+  Sp:0 (0gc) GC:0 M:2334MB
+  MH:3462MB MU:2334MB F:1128MB
+  Sim:0 (0.0/f) Max:0
+  AS  --
+  ICO --
+  ET  --
+  GM2 --
+  GW  --
+  PCL --
+  CU  --
+  US  --
+  SS  300x 55.8ms (0.186ms/c)
+
+  Alloc:780KB/5s (156KB/s)
+  A.AS:0KB A.SS:52KB A.Oth:728KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=True TimeScale=1 Sim=0
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 300 (0act) FPS:851 Worst:1.7ms
+  Sp:0 (0gc) GC:0 M:2335MB
+  MH:3462MB MU:2335MB F:1127MB
+  Sim:0 (0.0/f) Max:0
+  AS  --
+  ICO --
+  ET  --
+  GM2 --
+  GW  --
+  PCL --
+  CU  --
+  US  --
+  SS  300x 55.2ms (0.184ms/c)
+
+  Alloc:776KB/5s (155KB/s)
+  A.AS:0KB A.SS:76KB A.Oth:700KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=True TimeScale=1 Sim=0
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 299 (0act) FPS:839 Worst:1.9ms
+  Sp:0 (0gc) GC:0 M:2336MB
+  MH:3462MB MU:2335MB F:1126MB
+  Sim:0 (0.0/f) Max:0
+  AS  --
+  ICO --
+  ET  --
+  GM2 --
+  GW  --
+  PCL --
+  CU  --
+  US  --
+  SS  299x 55.9ms (0.187ms/c)
+
+  Alloc:752KB/5s (150KB/s)
+  A.AS:0KB A.SS:48KB A.Oth:704KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=True TimeScale=1 Sim=0
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 300 (0act) FPS:856 Worst:1.5ms
+  Sp:0 (0gc) GC:0 M:2337MB
+  MH:3462MB MU:2336MB F:1125MB
+  Sim:0 (0.0/f) Max:0
+  AS  --
+  ICO --
+  ET  --
+  GM2 --
+  GW  --
+  PCL --
+  CU  --
+  US  --
+  SS  300x 55.2ms (0.184ms/c)
+
+  Alloc:784KB/5s (157KB/s)
+  A.AS:0KB A.SS:64KB A.Oth:720KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=True TimeScale=1 Sim=0
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 300 (0act) FPS:839 Worst:2.3ms
+  Sp:0 (0gc) GC:0 M:2338MB
+  MH:3462MB MU:2337MB F:1125MB
+  Sim:0 (0.0/f) Max:0
+  AS  --
+  ICO --
+  ET  --
+  GM2 --
+  GW  --
+  PCL --
+  CU  --
+  US  --
+  SS  300x 55.5ms (0.185ms/c)
+
+  Alloc:816KB/5s (163KB/s)
+  A.AS:0KB A.SS:72KB A.Oth:744KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=True TimeScale=16 Sim=0
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 296 (0act) FPS:806 Worst:2.0ms
+  Sp:0 (0gc) GC:0 M:2339MB
+  MH:3462MB MU:2338MB F:1123MB
+  Sim:0 (0.0/f) Max:0
+  AS  --
+  ICO --
+  ET  --
+  GM2 --
+  GW  --
+  PCL --
+  CU  --
+  US  --
+  SS  296x 55.3ms (0.187ms/c)
+
+  Alloc:828KB/5s (166KB/s)
+  A.AS:0KB A.SS:32KB A.Oth:796KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 56.7ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 58.1ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 71.2ms Sim:125
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 41.5ms Sim:42
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 36.0ms Sim:3
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 35.7ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 33.6ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 35.1ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 33.1ms Sim:1
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 41.7ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 53.8ms Sim:1
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=False TimeScale=16 Sim=3
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 180 (40act) FPS:156 Worst:71.2ms
+  Sp:11 (0gc) GC:0 M:2370MB
+  MH:3462MB MU:2369MB F:1093MB
+  Sim:262 (1.5/f) Max:125
+  AS  262x 558.3ms (2.1ms/c)
+  ICO 187x 558.2ms (3.0ms/c)
+  ET  156x 423.8ms (2.7ms/c)
+  GM2 9x 100.9ms (11.2ms/c)
+  GW  --
+  PCL 7747x 26.1ms (0.003ms/c)
+  CU  3806x 7.9ms (0.002ms/c)
+  US  14776x 3.3ms (0.000ms/c)
+  SS  180x 162.5ms (0.903ms/c)
+  ICOskip:121 ia:42
+  Alloc:26620KB/5s (5324KB/s)
+  A.AS:17284KB A.SS:2988KB A.Oth:6348KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 33.9ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 38.0ms Sim:2
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=False TimeScale=16 Sim=1
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 204 (204act) FPS:127 Worst:38.0ms
+  Sp:2 (0gc) GC:0 M:2439MB
+  MH:3462MB MU:2438MB F:1023MB
+  Sim:285 (1.4/f) Max:2
+  AS  285x 866.3ms (3.0ms/c)
+  ICO 285x 866.1ms (3.0ms/c)
+  ET  368x 606.5ms (1.6ms/c)
+  GM2 17x 165.6ms (9.7ms/c)
+  GW  --
+  PCL 17398x 41.9ms (0.002ms/c)
+  CU  9015x 14.6ms (0.002ms/c)
+  US  62432x 8.7ms (0.000ms/c)
+  SS  204x 145.6ms (0.714ms/c)
+  ICOskip:8 ia:107
+  Alloc:62300KB/5s (12460KB/s)
+  A.AS:42988KB A.SS:3192KB A.Oth:16120KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 62.7ms Sim:1
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 33.9ms Sim:2
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=False TimeScale=16 Sim=1
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 206 (206act) FPS:125 Worst:62.7ms
+  Sp:2 (0gc) GC:0 M:2533MB
+  MH:3462MB MU:2533MB F:929MB
+  Sim:286 (1.4/f) Max:3
+  AS  286x 852.9ms (3.0ms/c)
+  ICO 286x 852.7ms (3.0ms/c)
+  ET  415x 607.3ms (1.5ms/c)
+  GM2 19x 142.4ms (7.5ms/c)
+  GW  --
+  PCL 17212x 38.6ms (0.002ms/c)
+  CU  9029x 12.6ms (0.001ms/c)
+  US  62090x 8.2ms (0.000ms/c)
+  SS  206x 211.1ms (1.0ms/c)
+  ICOskip:11 ia:90
+  Alloc:85636KB/5s (17127KB/s)
+  A.AS:58132KB A.SS:7488KB A.Oth:20016KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 63.3ms Sim:1
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=False TimeScale=16 Sim=2
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 212 (212act) FPS:135 Worst:63.3ms
+  Sp:1 (0gc) GC:0 M:2607MB
+  MH:3462MB MU:2606MB F:855MB
+  Sim:343 (1.6/f) Max:53
+  AS  343x 694.7ms (2.0ms/c)
+  ICO 340x 694.5ms (2.0ms/c)
+  ET  328x 441.1ms (1.3ms/c)
+  GM2 18x 161.6ms (9.0ms/c)
+  GW  22x 0.9ms (0.041ms/c)
+  PCL 17257x 40.0ms (0.002ms/c)
+  CU  9030x 12.4ms (0.001ms/c)
+  US  64317x 9.3ms (0.000ms/c)
+  SS  212x 249.2ms (1.2ms/c)
+  ICOskip:55 ia:85
+  Alloc:64648KB/5s (12930KB/s)
+  A.AS:32316KB A.SS:8868KB A.Oth:23464KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 36.2ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 100.5ms Sim:1
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 54.3ms Sim:3
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 101.8ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 55.5ms Sim:2
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=False TimeScale=16 Sim=2
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 145 (145act) FPS:80 Worst:101.8ms
+  Sp:5 (0gc) GC:0 M:2668MB
+  MH:3462MB MU:2668MB F:794MB
+  Sim:224 (1.5/f) Max:3
+  AS  224x 867.8ms (3.9ms/c)
+  ICO 224x 867.6ms (3.9ms/c)
+  ET  326x 540.3ms (1.7ms/c)
+  GM2 22x 298.9ms (13.6ms/c)
+  GW  36x 0.6ms (0.015ms/c)
+  PCL 17339x 54.7ms (0.003ms/c)
+  CU  8780x 17.5ms (0.002ms/c)
+  US  56324x 25.4ms (0.000ms/c)
+  SS  145x 289.4ms (2.0ms/c)
+  ICOskip:9 ia:125
+  Alloc:58680KB/5s (11736KB/s)
+  A.AS:28252KB A.SS:8960KB A.Oth:21468KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 35.4ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 33.1ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 47.4ms Sim:2
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=False TimeScale=16 Sim=2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 58.1ms Sim:2
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 104 (104act) FPS:66 Worst:58.1ms
+  Sp:4 (0gc) GC:0 M:2723MB
+  MH:3462MB MU:2722MB F:740MB
+  Sim:184 (1.8/f) Max:3
+  AS  184x 816.9ms (4.4ms/c)
+  ICO 184x 816.7ms (4.4ms/c)
+  ET  386x 505.9ms (1.3ms/c)
+  GM2 20x 263.8ms (13.2ms/c)
+  GW  33x 0.5ms (0.015ms/c)
+  PCL 17233x 56.0ms (0.003ms/c)
+  CU  8988x 18.4ms (0.002ms/c)
+  US  38850x 8.1ms (0.000ms/c)
+  SS  104x 181.0ms (1.7ms/c)
+  ICOskip:11 ia:103
+  Alloc:49036KB/5s (9807KB/s)
+  A.AS:24556KB A.SS:4244KB A.Oth:20236KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 34.6ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 63.7ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 48.3ms Sim:1
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=False TimeScale=16 Sim=1
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 109 (109act) FPS:65 Worst:63.7ms
+  Sp:3 (0gc) GC:0 M:2787MB
+  MH:3462MB MU:2787MB F:675MB
+  Sim:190 (1.7/f) Max:3
+  AS  190x 836.2ms (4.4ms/c)
+  ICO 190x 836.1ms (4.4ms/c)
+  ET  443x 506.3ms (1.1ms/c)
+  GM2 22x 226.9ms (10.3ms/c)
+  GW  27x 0.4ms (0.015ms/c)
+  PCL 17815x 57.1ms (0.003ms/c)
+  CU  9176x 19.5ms (0.002ms/c)
+  US  40503x 8.6ms (0.000ms/c)
+  SS  109x 240.3ms (2.2ms/c)
+  ICOskip:9 ia:93
+  Alloc:58216KB/5s (11643KB/s)
+  A.AS:32596KB A.SS:6032KB A.Oth:19588KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 35.6ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 42.6ms Sim:1
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 71.5ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 34.1ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 39.9ms Sim:1
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 39.6ms Sim:2
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=False TimeScale=16 Sim=2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 65.3ms Sim:2
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 111 (111act) FPS:66 Worst:71.5ms
+  Sp:7 (0gc) GC:0 M:2847MB
+  MH:3462MB MU:2847MB F:615MB
+  Sim:191 (1.7/f) Max:3
+  AS  191x 920.3ms (4.8ms/c)
+  ICO 191x 920.2ms (4.8ms/c)
+  ET  432x 583.0ms (1.3ms/c)
+  GM2 28x 310.3ms (11.1ms/c)
+  GW  39x 0.9ms (0.023ms/c)
+  PCL 17219x 57.8ms (0.003ms/c)
+  CU  8952x 19.5ms (0.002ms/c)
+  US  40285x 8.9ms (0.000ms/c)
+  SS  111x 186.1ms (1.7ms/c)
+  ICOskip:11 ia:106
+  Alloc:54496KB/5s (10899KB/s)
+  A.AS:30572KB A.SS:4156KB A.Oth:19768KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 38.7ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 89.6ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 39.6ms Sim:1
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 34.5ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 35.0ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 36.5ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 34.7ms Sim:2
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=False TimeScale=16 Sim=2
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 105 (105act) FPS:66 Worst:89.6ms
+  Sp:7 (0gc) GC:0 M:2900MB
+  MH:3462MB MU:2900MB F:562MB
+  Sim:185 (1.8/f) Max:3
+  AS  185x 727.5ms (3.9ms/c)
+  ICO 185x 727.3ms (3.9ms/c)
+  ET  356x 403.6ms (1.1ms/c)
+  GM2 22x 234.7ms (10.7ms/c)
+  GW  40x 0.6ms (0.016ms/c)
+  PCL 17239x 57.4ms (0.003ms/c)
+  CU  8972x 19.4ms (0.002ms/c)
+  US  47233x 23.2ms (0.000ms/c)
+  SS  105x 281.8ms (2.7ms/c)
+  ICOskip:10 ia:90
+  Alloc:47080KB/5s (9416KB/s)
+  A.AS:18808KB A.SS:8476KB A.Oth:19796KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 40.3ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 36.1ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 59.1ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 45.4ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 95.4ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 34.9ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 47.3ms Sim:10
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=False TimeScale=16 Sim=10
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 87 (87act) FPS:55 Worst:95.4ms
+  Sp:7 (0gc) GC:0 M:2965MB
+  MH:3462MB MU:2964MB F:497MB
+  Sim:303 (3.5/f) Max:131
+  AS  303x 872.4ms (2.9ms/c)
+  ICO 222x 872.3ms (3.9ms/c)
+  ET  415x 574.5ms (1.4ms/c)
+  GM2 18x 226.7ms (12.6ms/c)
+  GW  40x 0.6ms (0.016ms/c)
+  PCL 17047x 55.9ms (0.003ms/c)
+  CU  8712x 18.4ms (0.002ms/c)
+  US  33957x 7.0ms (0.000ms/c)
+  SS  87x 221.1ms (2.5ms/c)
+  ICOskip:70 ia:94
+  Alloc:60400KB/5s (12080KB/s)
+  A.AS:37520KB A.SS:5548KB A.Oth:17332KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 46.7ms Sim:2
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=False TimeScale=16 Sim=2
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 150 (150act) FPS:118 Worst:46.7ms
+  Sp:1 (0gc) GC:0 M:3026MB
+  MH:3462MB MU:3025MB F:436MB
+  Sim:230 (1.5/f) Max:2
+  AS  230x 608.5ms (2.6ms/c)
+  ICO 230x 608.3ms (2.6ms/c)
+  ET  425x 369.0ms (0.868ms/c)
+  GM2 24x 170.6ms (7.1ms/c)
+  GW  40x 0.5ms (0.012ms/c)
+  PCL 17222x 41.9ms (0.002ms/c)
+  CU  8951x 13.7ms (0.002ms/c)
+  US  50571x 6.7ms (0.000ms/c)
+  SS  150x 139.5ms (0.930ms/c)
+  ICOskip:4 ia:92
+  Alloc:51936KB/5s (10387KB/s)
+  A.AS:26288KB A.SS:3728KB A.Oth:21920KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 40.5ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 37.9ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 33.9ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 33.7ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 34.9ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 34.4ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 34.6ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 33.5ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 87.2ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 38.6ms Sim:3
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=False TimeScale=16 Sim=2
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 96 (96act) FPS:60 Worst:87.2ms
+  Sp:10 (0gc) GC:0 M:3094MB
+  MH:3462MB MU:3093MB F:368MB
+  Sim:198 (2.1/f) Max:24
+  AS  198x 807.9ms (4.1ms/c)
+  ICO 198x 807.8ms (4.1ms/c)
+  ET  467x 502.1ms (1.1ms/c)
+  GM2 16x 193.0ms (12.1ms/c)
+  GW  39x 0.6ms (0.014ms/c)
+  PCL 18260x 54.7ms (0.003ms/c)
+  CU  9000x 18.5ms (0.002ms/c)
+  US  44460x 20.9ms (0.000ms/c)
+  SS  96x 264.7ms (2.8ms/c)
+  ICOskip:36 ia:78
+  Alloc:60796KB/5s (12159KB/s)
+  A.AS:31900KB A.SS:8692KB A.Oth:20204KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 35.5ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 66.7ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 33.6ms Sim:16
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 34.2ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 40.3ms Sim:2
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=False TimeScale=16 Sim=2
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 96 (96act) FPS:64 Worst:66.7ms
+  Sp:5 (0gc) GC:0 M:3145MB
+  MH:3462MB MU:3144MB F:317MB
+  Sim:191 (2.0/f) Max:16
+  AS  191x 799.5ms (4.2ms/c)
+  ICO 191x 799.3ms (4.2ms/c)
+  ET  391x 483.1ms (1.2ms/c)
+  GM2 22x 284.0ms (12.9ms/c)
+  GW  40x 0.7ms (0.018ms/c)
+  PCL 17430x 57.8ms (0.003ms/c)
+  CU  8965x 19.2ms (0.002ms/c)
+  US  37618x 8.0ms (0.000ms/c)
+  SS  96x 191.7ms (2.0ms/c)
+  ICOskip:23 ia:134
+  Alloc:47048KB/5s (9410KB/s)
+  A.AS:23800KB A.SS:4612KB A.Oth:18636KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 55.7ms Sim:1
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 39.1ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 36.6ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 47.8ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 41.1ms Sim:2
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=False TimeScale=16 Sim=2
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 106 (106act) FPS:69 Worst:55.7ms
+  Sp:5 (0gc) GC:0 M:3205MB
+  MH:3462MB MU:3204MB F:257MB
+  Sim:186 (1.8/f) Max:3
+  AS  186x 810.3ms (4.4ms/c)
+  ICO 186x 810.1ms (4.4ms/c)
+  ET  456x 520.4ms (1.1ms/c)
+  GM2 22x 275.1ms (12.5ms/c)
+  GW  40x 0.6ms (0.014ms/c)
+  PCL 17126x 52.8ms (0.003ms/c)
+  CU  8889x 17.6ms (0.002ms/c)
+  US  38455x 7.1ms (0.000ms/c)
+  SS  106x 227.8ms (2.1ms/c)
+  ICOskip:13 ia:142
+  Alloc:54996KB/5s (10999KB/s)
+  A.AS:28380KB A.SS:7488KB A.Oth:19128KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=False TimeScale=16 Sim=1
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 179 (179act) FPS:150 Worst:31.0ms
+  Sp:0 (0gc) GC:0 M:3261MB
+  MH:3462MB MU:3261MB F:201MB
+  Sim:259 (1.4/f) Max:2
+  AS  259x 480.7ms (1.9ms/c)
+  ICO 259x 480.5ms (1.9ms/c)
+  ET  366x 254.4ms (0.695ms/c)
+  GM2 15x 138.5ms (9.2ms/c)
+  GW  40x 0.5ms (0.012ms/c)
+  PCL 17021x 39.3ms (0.002ms/c)
+  CU  8907x 13.2ms (0.001ms/c)
+  US  55656x 6.9ms (0.000ms/c)
+  SS  179x 175.2ms (0.979ms/c)
+  ICOskip:9 ia:99
+  Alloc:51040KB/5s (10208KB/s)
+  A.AS:19440KB A.SS:8236KB A.Oth:23364KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 36.0ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 56.7ms Sim:1
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=False TimeScale=16 Sim=1
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 170 (170act) FPS:124 Worst:56.7ms
+  Sp:2 (0gc) GC:0 M:3331MB
+  MH:3462MB MU:3330MB F:131MB
+  Sim:250 (1.5/f) Max:2
+  AS  250x 554.6ms (2.2ms/c)
+  ICO 250x 554.5ms (2.2ms/c)
+  ET  405x 338.4ms (0.836ms/c)
+  GM2 21x 178.8ms (8.5ms/c)
+  GW  40x 0.5ms (0.013ms/c)
+  PCL 17071x 38.0ms (0.002ms/c)
+  CU  8896x 12.7ms (0.001ms/c)
+  US  62280x 14.9ms (0.000ms/c)
+  SS  170x 282.7ms (1.7ms/c)
+  ICOskip:6 ia:130
+  Alloc:64300KB/5s (12860KB/s)
+  A.AS:26208KB A.SS:14940KB A.Oth:23152KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 769.9ms [GCx1] Sim:1
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 54.7ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 39.3ms Sim:2
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=False TimeScale=16 Sim=1
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 137 (137act) FPS:70 Worst:769.9ms
+  Sp:3 (1gc) GC:1 M:2444MB
+  MH:3462MB MU:2444MB F:1018MB
+  Sim:207 (1.5/f) Max:3
+  AS  207x 1343.8ms (6.5ms/c)
+  ICO 207x 1343.6ms (6.5ms/c)
+  ET  361x 1127.0ms (3.1ms/c)
+  GM2 16x 147.8ms (9.2ms/c)
+  GW  35x 0.5ms (0.014ms/c)
+  PCL 14991x 38.5ms (0.003ms/c)
+  CU  7793x 12.7ms (0.002ms/c)
+  US  44035x 6.2ms (0.000ms/c)
+  SS  137x 169.5ms (1.2ms/c)
+  ICOskip:9 ia:92
+  Alloc:27520KB/5s (5504KB/s)
+  A.AS:17736KB A.SS:3416KB A.Oth:6368KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 33.2ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 53.9ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 49.2ms Sim:2
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=False TimeScale=16 Sim=2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 46.3ms Sim:2
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 103 (103act) FPS:69 Worst:53.9ms
+  Sp:4 (0gc) GC:0 M:2464MB
+  MH:3462MB MU:2463MB F:999MB
+  Sim:183 (1.8/f) Max:3
+  AS  183x 741.0ms (4.0ms/c)
+  ICO 183x 740.8ms (4.0ms/c)
+  ET  394x 431.1ms (1.1ms/c)
+  GM2 19x 232.7ms (12.2ms/c)
+  GW  40x 0.7ms (0.018ms/c)
+  PCL 17378x 57.2ms (0.003ms/c)
+  CU  8960x 19.1ms (0.002ms/c)
+  US  38263x 8.0ms (0.000ms/c)
+  SS  103x 214.6ms (2.1ms/c)
+  ICOskip:12 ia:99
+  Alloc:17388KB/5s (3478KB/s)
+  A.AS:10820KB A.SS:3816KB A.Oth:2752KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 48.1ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 51.3ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 39.5ms Sim:2
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=False TimeScale=16 Sim=2
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 95 (95act) FPS:61 Worst:51.3ms
+  Sp:3 (0gc) GC:0 M:2491MB
+  MH:3462MB MU:2491MB F:971MB
+  Sim:176 (1.9/f) Max:3
+  AS  176x 794.4ms (4.5ms/c)
+  ICO 176x 794.2ms (4.5ms/c)
+  ET  434x 464.6ms (1.1ms/c)
+  GM2 16x 207.4ms (13.0ms/c)
+  GW  40x 0.7ms (0.018ms/c)
+  PCL 18362x 57.7ms (0.003ms/c)
+  CU  8984x 19.6ms (0.002ms/c)
+  US  36817x 7.7ms (0.000ms/c)
+  SS  95x 242.0ms (2.5ms/c)
+  ICOskip:12 ia:88
+  Alloc:23984KB/5s (4797KB/s)
+  A.AS:14944KB A.SS:5152KB A.Oth:3888KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 34.9ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 39.2ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 110.6ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 35.6ms Sim:3
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 36.1ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 41.3ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 39.4ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 34.4ms Sim:2
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=False TimeScale=16 Sim=2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 39.6ms Sim:3
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 93 (93act) FPS:60 Worst:110.6ms
+  Sp:9 (0gc) GC:0 M:2532MB
+  MH:3462MB MU:2532MB F:930MB
+  Sim:172 (1.8/f) Max:3
+  AS  172x 803.3ms (4.7ms/c)
+  ICO 172x 803.1ms (4.7ms/c)
+  ET  395x 486.3ms (1.2ms/c)
+  GM2 18x 294.8ms (16.4ms/c)
+  GW  40x 0.7ms (0.018ms/c)
+  PCL 17207x 55.8ms (0.003ms/c)
+  CU  9021x 19.4ms (0.002ms/c)
+  US  43805x 22.9ms (0.001ms/c)
+  SS  93x 233.9ms (2.5ms/c)
+  ICOskip:13 ia:128
+  Alloc:36404KB/5s (7281KB/s)
+  A.AS:20288KB A.SS:4648KB A.Oth:11468KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 37.1ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 35.4ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 39.2ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 40.6ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 37.7ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 39.1ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 34.5ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 40.6ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 36.6ms Sim:1
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 33.7ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 50.4ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 38.3ms Sim:2
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=False TimeScale=16 Sim=2
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 88 (88act) FPS:56 Worst:50.4ms
+  Sp:12 (0gc) GC:0 M:2584MB
+  MH:3462MB MU:2584MB F:878MB
+  Sim:169 (1.9/f) Max:3
+  AS  169x 909.0ms (5.4ms/c)
+  ICO 169x 908.9ms (5.4ms/c)
+  ET  399x 581.6ms (1.5ms/c)
+  GM2 20x 367.9ms (18.4ms/c)
+  GW  40x 0.7ms (0.018ms/c)
+  PCL 17408x 57.9ms (0.003ms/c)
+  CU  9039x 19.6ms (0.002ms/c)
+  US  34977x 7.5ms (0.000ms/c)
+  SS  88x 172.3ms (2.0ms/c)
+  ICOskip:14 ia:124
+  Alloc:45792KB/5s (9158KB/s)
+  A.AS:26524KB A.SS:3464KB A.Oth:15804KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 37.9ms Sim:1
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 43.3ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 37.5ms Sim:1
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 44.5ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 35.8ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 47.6ms Sim:3
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 38.4ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 39.0ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 36.3ms Sim:1
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 36.8ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 36.1ms Sim:2
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=False TimeScale=16 Sim=2
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 92 (92act) FPS:61 Worst:47.6ms
+  Sp:11 (0gc) GC:0 M:2630MB
+  MH:3462MB MU:2630MB F:832MB
+  Sim:225 (2.4/f) Max:55
+  AS  225x 864.6ms (3.8ms/c)
+  ICO 220x 864.4ms (3.9ms/c)
+  ET  343x 555.1ms (1.6ms/c)
+  GM2 18x 383.8ms (21.3ms/c)
+  GW  41x 0.7ms (0.017ms/c)
+  PCL 17209x 56.6ms (0.003ms/c)
+  CU  9015x 19.0ms (0.002ms/c)
+  US  36479x 7.8ms (0.000ms/c)
+  SS  92x 129.4ms (1.4ms/c)
+  ICOskip:58 ia:138
+  Alloc:41044KB/5s (8209KB/s)
+  A.AS:22228KB A.SS:2112KB A.Oth:16704KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 62.8ms Sim:1
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 84.9ms Sim:122
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 41.0ms Sim:22
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 33.8ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 52.1ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 43.2ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 44.0ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 34.4ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 36.6ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 39.8ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 36.7ms Sim:3
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=False TimeScale=16 Sim=2
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 86 (86act) FPS:51 Worst:84.9ms
+  Sp:11 (0gc) GC:0 M:2695MB
+  MH:3462MB MU:2694MB F:768MB
+  Sim:305 (3.5/f) Max:122
+  AS  305x 980.4ms (3.2ms/c)
+  ICO 233x 980.3ms (4.2ms/c)
+  ET  386x 683.5ms (1.8ms/c)
+  GM2 18x 352.5ms (19.6ms/c)
+  GW  39x 0.7ms (0.018ms/c)
+  PCL 17348x 55.2ms (0.003ms/c)
+  CU  9025x 18.8ms (0.002ms/c)
+  US  33386x 6.8ms (0.000ms/c)
+  SS  86x 191.7ms (2.2ms/c)
+  ICOskip:85 ia:129
+  Alloc:59084KB/5s (11817KB/s)
+  A.AS:37720KB A.SS:4160KB A.Oth:17204KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 34.0ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 97.0ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 37.8ms Sim:3
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 39.4ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 39.9ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 49.2ms Sim:1
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 33.2ms Sim:3
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 33.4ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 44.1ms Sim:2
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=False TimeScale=16 Sim=2
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 96 (96act) FPS:63 Worst:97.0ms
+  Sp:9 (0gc) GC:0 M:2748MB
+  MH:3462MB MU:2747MB F:714MB
+  Sim:176 (1.8/f) Max:3
+  AS  176x 733.8ms (4.2ms/c)
+  ICO 176x 733.7ms (4.2ms/c)
+  ET  374x 416.6ms (1.1ms/c)
+  GM2 14x 212.1ms (15.2ms/c)
+  GW  40x 0.7ms (0.018ms/c)
+  PCL 17116x 56.2ms (0.003ms/c)
+  CU  9011x 19.6ms (0.002ms/c)
+  US  45361x 22.5ms (0.000ms/c)
+  SS  96x 265.2ms (2.8ms/c)
+  ICOskip:10 ia:80
+  Alloc:48444KB/5s (9689KB/s)
+  A.AS:22660KB A.SS:7648KB A.Oth:18136KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 44.6ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 37.5ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 33.8ms Sim:2
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=False TimeScale=16 Sim=2
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 98 (98act) FPS:70 Worst:44.6ms
+  Sp:3 (0gc) GC:0 M:2796MB
+  MH:3462MB MU:2795MB F:667MB
+  Sim:233 (2.4/f) Max:57
+  AS  233x 702.7ms (3.0ms/c)
+  ICO 226x 702.6ms (3.1ms/c)
+  ET  365x 392.8ms (1.1ms/c)
+  GM2 14x 203.4ms (14.5ms/c)
+  GW  41x 0.7ms (0.018ms/c)
+  PCL 17172x 57.0ms (0.003ms/c)
+  CU  8782x 18.4ms (0.002ms/c)
+  US  37328x 7.9ms (0.000ms/c)
+  SS  98x 186.9ms (1.9ms/c)
+  ICOskip:60 ia:79
+  Alloc:42500KB/5s (8500KB/s)
+  A.AS:20616KB A.SS:3992KB A.Oth:17892KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 34.3ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 40.3ms Sim:2
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=False TimeScale=16 Sim=2
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 146 (146act) FPS:109 Worst:40.3ms
+  Sp:2 (0gc) GC:0 M:2856MB
+  MH:3462MB MU:2855MB F:606MB
+  Sim:226 (1.5/f) Max:2
+  AS  226x 633.0ms (2.8ms/c)
+  ICO 226x 632.9ms (2.8ms/c)
+  ET  475x 362.5ms (0.763ms/c)
+  GM2 16x 176.1ms (11.0ms/c)
+  GW  40x 0.6ms (0.015ms/c)
+  PCL 18174x 46.1ms (0.003ms/c)
+  CU  9031x 15.7ms (0.002ms/c)
+  US  49196x 7.4ms (0.000ms/c)
+  SS  146x 179.8ms (1.2ms/c)
+  ICOskip:8 ia:92
+  Alloc:54856KB/5s (10971KB/s)
+  A.AS:28516KB A.SS:4884KB A.Oth:21456KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 52.7ms Sim:1
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=False TimeScale=16 Sim=2
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 166 (166act) FPS:123 Worst:52.7ms
+  Sp:1 (0gc) GC:0 M:2924MB
+  MH:3462MB MU:2924MB F:538MB
+  Sim:246 (1.5/f) Max:2
+  AS  246x 600.0ms (2.4ms/c)
+  ICO 246x 599.9ms (2.4ms/c)
+  ET  553x 370.5ms (0.670ms/c)
+  GM2 25x 201.7ms (8.1ms/c)
+  GW  40x 0.5ms (0.013ms/c)
+  PCL 17270x 38.8ms (0.002ms/c)
+  CU  9045x 12.5ms (0.001ms/c)
+  US  61930x 15.0ms (0.000ms/c)
+  SS  166x 234.8ms (1.4ms/c)
+  ICOskip:7 ia:116
+  Alloc:61824KB/5s (12365KB/s)
+  A.AS:30684KB A.SS:9196KB A.Oth:21944KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=False TimeScale=16 Sim=1
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 165 (165act) FPS:132 Worst:27.8ms
+  Sp:0 (0gc) GC:0 M:2988MB
+  MH:3462MB MU:2988MB F:474MB
+  Sim:245 (1.5/f) Max:2
+  AS  245x 559.7ms (2.3ms/c)
+  ICO 245x 559.5ms (2.3ms/c)
+  ET  448x 331.8ms (0.741ms/c)
+  GM2 17x 162.2ms (9.5ms/c)
+  GW  40x 0.5ms (0.013ms/c)
+  PCL 17318x 39.0ms (0.002ms/c)
+  CU  9045x 12.8ms (0.001ms/c)
+  US  53996x 6.5ms (0.000ms/c)
+  SS  165x 156.6ms (0.949ms/c)
+  ICOskip:6 ia:93
+  Alloc:53916KB/5s (10783KB/s)
+  A.AS:27400KB A.SS:3736KB A.Oth:22780KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 35.6ms Sim:1
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 38.0ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 34.5ms Sim:1
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 35.1ms Sim:2
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=False TimeScale=16 Sim=2
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 118 (118act) FPS:85 Worst:38.0ms
+  Sp:4 (0gc) GC:0 M:3045MB
+  MH:3462MB MU:3044MB F:417MB
+  Sim:199 (1.7/f) Max:3
+  AS  199x 697.3ms (3.5ms/c)
+  ICO 199x 697.2ms (3.5ms/c)
+  ET  418x 412.2ms (0.986ms/c)
+  GM2 12x 171.4ms (14.3ms/c)
+  GW  40x 0.7ms (0.016ms/c)
+  PCL 17402x 50.5ms (0.003ms/c)
+  CU  9042x 16.6ms (0.002ms/c)
+  US  43104x 7.2ms (0.000ms/c)
+  SS  118x 176.9ms (1.5ms/c)
+  ICOskip:8 ia:64
+  Alloc:49960KB/5s (9992KB/s)
+  A.AS:26692KB A.SS:3660KB A.Oth:19608KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 33.3ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 39.5ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 60.2ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 36.0ms Sim:3
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 38.7ms Sim:1
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 41.7ms Sim:3
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 38.9ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 36.1ms Sim:2
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=False TimeScale=16 Sim=2
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 95 (95act) FPS:68 Worst:60.2ms
+  Sp:8 (0gc) GC:0 M:3092MB
+  MH:3462MB MU:3092MB F:370MB
+  Sim:175 (1.8/f) Max:3
+  AS  175x 693.3ms (4.0ms/c)
+  ICO 175x 693.2ms (4.0ms/c)
+  ET  365x 382.2ms (1.0ms/c)
+  GM2 19x 286.7ms (15.1ms/c)
+  GW  40x 0.7ms (0.018ms/c)
+  PCL 17208x 55.9ms (0.003ms/c)
+  CU  9039x 18.8ms (0.002ms/c)
+  US  36786x 7.5ms (0.000ms/c)
+  SS  95x 186.3ms (2.0ms/c)
+  ICOskip:12 ia:101
+  Alloc:40824KB/5s (8165KB/s)
+  A.AS:19064KB A.SS:4316KB A.Oth:17444KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 33.3ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 65.8ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 37.7ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 33.4ms Sim:1
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 33.5ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 71.2ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 39.4ms Sim:2
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=False TimeScale=16 Sim=2
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 93 (93act) FPS:58 Worst:71.2ms
+  Sp:7 (0gc) GC:0 M:3153MB
+  MH:3462MB MU:3153MB F:309MB
+  Sim:173 (1.9/f) Max:3
+  AS  173x 829.4ms (4.8ms/c)
+  ICO 173x 829.3ms (4.8ms/c)
+  ET  395x 522.2ms (1.3ms/c)
+  GM2 16x 266.6ms (16.7ms/c)
+  GW  40x 0.7ms (0.017ms/c)
+  PCL 17078x 56.6ms (0.003ms/c)
+  CU  8951x 19.5ms (0.002ms/c)
+  US  43779x 18.3ms (0.000ms/c)
+  SS  93x 245.0ms (2.6ms/c)
+  ICOskip:13 ia:93
+  Alloc:56784KB/5s (11357KB/s)
+  A.AS:30236KB A.SS:7396KB A.Oth:19152KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 38.2ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 44.5ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 33.5ms Sim:1
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 43.6ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 40.7ms Sim:2
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=False TimeScale=16 Sim=2
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 103 (103act) FPS:70 Worst:44.5ms
+  Sp:5 (0gc) GC:0 M:3202MB
+  MH:3462MB MU:3201MB F:261MB
+  Sim:184 (1.8/f) Max:3
+  AS  184x 697.8ms (3.8ms/c)
+  ICO 184x 697.7ms (3.8ms/c)
+  ET  359x 394.4ms (1.1ms/c)
+  GM2 17x 274.9ms (16.2ms/c)
+  GW  40x 0.7ms (0.018ms/c)
+  PCL 17240x 55.9ms (0.003ms/c)
+  CU  9172x 19.4ms (0.002ms/c)
+  US  38464x 7.6ms (0.000ms/c)
+  SS  103x 237.4ms (2.3ms/c)
+  ICOskip:12 ia:101
+  Alloc:43116KB/5s (8623KB/s)
+  A.AS:18028KB A.SS:5712KB A.Oth:19376KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 36.5ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 40.5ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 33.9ms Sim:2
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=False TimeScale=16 Sim=1
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 101 (101act) FPS:66 Worst:40.5ms
+  Sp:3 (0gc) GC:0 M:3251MB
+  MH:3462MB MU:3250MB F:211MB
+  Sim:181 (1.8/f) Max:3
+  AS  181x 772.9ms (4.3ms/c)
+  ICO 181x 772.7ms (4.3ms/c)
+  ET  409x 455.9ms (1.1ms/c)
+  GM2 17x 280.7ms (16.5ms/c)
+  GW  41x 0.7ms (0.018ms/c)
+  PCL 17170x 57.8ms (0.003ms/c)
+  CU  8931x 19.5ms (0.002ms/c)
+  US  38130x 8.3ms (0.000ms/c)
+  SS  101x 207.1ms (2.1ms/c)
+  ICOskip:10 ia:99
+  Alloc:45204KB/5s (9041KB/s)
+  A.AS:21376KB A.SS:4908KB A.Oth:18920KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 33.4ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 54.3ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 33.6ms Sim:2
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=False TimeScale=16 Sim=2
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 102 (102act) FPS:71 Worst:54.3ms
+  Sp:3 (0gc) GC:0 M:3307MB
+  MH:3462MB MU:3307MB F:155MB
+  Sim:182 (1.8/f) Max:2
+  AS  182x 742.2ms (4.1ms/c)
+  ICO 182x 742.1ms (4.1ms/c)
+  ET  440x 400.0ms (0.909ms/c)
+  GM2 13x 146.1ms (11.2ms/c)
+  GW  40x 0.7ms (0.018ms/c)
+  PCL 20077x 59.2ms (0.003ms/c)
+  CU  8995x 19.5ms (0.002ms/c)
+  US  38232x 8.0ms (0.000ms/c)
+  SS  102x 165.7ms (1.6ms/c)
+  ICOskip:12 ia:64
+  Alloc:51724KB/5s (10345KB/s)
+  A.AS:28492KB A.SS:3380KB A.Oth:19852KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 35.6ms Sim:1
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 39.2ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 79.6ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 33.3ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 35.0ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 39.2ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 35.3ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 41.0ms Sim:2
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=False TimeScale=16 Sim=2
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 99 (99act) FPS:63 Worst:79.6ms
+  Sp:8 (0gc) GC:0 M:3362MB
+  MH:3462MB MU:3361MB F:100MB
+  Sim:179 (1.8/f) Max:3
+  AS  179x 762.3ms (4.3ms/c)
+  ICO 179x 762.2ms (4.3ms/c)
+  ET  401x 431.2ms (1.1ms/c)
+  GM2 19x 278.4ms (14.7ms/c)
+  GW  40x 0.8ms (0.019ms/c)
+  PCL 18812x 58.3ms (0.003ms/c)
+  CU  9052x 19.6ms (0.002ms/c)
+  US  46149x 21.4ms (0.000ms/c)
+  SS  99x 284.6ms (2.9ms/c)
+  ICOskip:10 ia:92
+  Alloc:51780KB/5s (10356KB/s)
+  A.AS:22052KB A.SS:9492KB A.Oth:20236KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=False TimeScale=16 Sim=2
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 139 (139act) FPS:125 Worst:32.0ms
+  Sp:0 (0gc) GC:1 M:2502MB
+  MH:3462MB MU:2501MB F:961MB
+  Sim:208 (1.5/f) Max:2
+  AS  208x 495.9ms (2.4ms/c)
+  ICO 208x 495.7ms (2.4ms/c)
+  ET  362x 283.4ms (0.783ms/c)
+  GM2 17x 159.2ms (9.4ms/c)
+  GW  34x 0.5ms (0.013ms/c)
+  PCL 14864x 36.7ms (0.002ms/c)
+  CU  7701x 12.0ms (0.002ms/c)
+  US  46153x 6.5ms (0.000ms/c)
+  SS  139x 154.2ms (1.1ms/c)
+  ICOskip:4 ia:82
+  Alloc:13580KB/5s (2716KB/s)
+  A.AS:6724KB A.SS:2684KB A.Oth:4172KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 34.9ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 38.4ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 35.4ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 34.4ms Sim:1
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=False TimeScale=16 Sim=2
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 107 (107act) FPS:72 Worst:38.4ms
+  Sp:4 (0gc) GC:0 M:2516MB
+  MH:3462MB MU:2516MB F:946MB
+  Sim:187 (1.7/f) Max:3
+  AS  187x 717.9ms (3.8ms/c)
+  ICO 187x 717.7ms (3.8ms/c)
+  ET  369x 396.4ms (1.1ms/c)
+  GM2 16x 230.8ms (14.4ms/c)
+  GW  40x 0.7ms (0.017ms/c)
+  PCL 17225x 56.0ms (0.003ms/c)
+  CU  9082x 19.2ms (0.002ms/c)
+  US  40374x 8.3ms (0.000ms/c)
+  SS  107x 195.7ms (1.8ms/c)
+  ICOskip:9 ia:80
+  Alloc:10924KB/5s (2185KB/s)
+  A.AS:5304KB A.SS:2892KB A.Oth:2728KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 43.0ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 36.0ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 41.2ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 34.8ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 38.9ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 37.5ms Sim:2
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=False TimeScale=16 Sim=1
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 95 (95act) FPS:60 Worst:43.0ms
+  Sp:6 (0gc) GC:0 M:2535MB
+  MH:3462MB MU:2534MB F:927MB
+  Sim:175 (1.8/f) Max:3
+  AS  175x 888.3ms (5.1ms/c)
+  ICO 175x 888.1ms (5.1ms/c)
+  ET  476x 555.7ms (1.2ms/c)
+  GM2 21x 355.0ms (16.9ms/c)
+  GW  40x 0.8ms (0.019ms/c)
+  PCL 17300x 57.5ms (0.003ms/c)
+  CU  9083x 20.7ms (0.002ms/c)
+  US  37233x 7.9ms (0.000ms/c)
+  SS  95x 177.8ms (1.9ms/c)
+  ICOskip:11 ia:146
+  Alloc:13832KB/5s (2766KB/s)
+  A.AS:8328KB A.SS:2308KB A.Oth:3196KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 57.2ms Sim:1
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=False TimeScale=16 Sim=1
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 176 (176act) FPS:140 Worst:57.2ms
+  Sp:1 (0gc) GC:0 M:2559MB
+  MH:3462MB MU:2558MB F:904MB
+  Sim:256 (1.5/f) Max:2
+  AS  256x 512.9ms (2.0ms/c)
+  ICO 256x 512.7ms (2.0ms/c)
+  ET  428x 279.0ms (0.652ms/c)
+  GM2 16x 155.6ms (9.7ms/c)
+  GW  40x 0.5ms (0.013ms/c)
+  PCL 17243x 40.1ms (0.002ms/c)
+  CU  9008x 12.9ms (0.001ms/c)
+  US  64196x 15.8ms (0.000ms/c)
+  SS  176x 205.6ms (1.2ms/c)
+  ICOskip:6 ia:80
+  Alloc:18360KB/5s (3672KB/s)
+  A.AS:9468KB A.SS:4244KB A.Oth:4648KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=False TimeScale=16 Sim=1
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 178 (178act) FPS:139 Worst:28.0ms
+  Sp:0 (0gc) GC:0 M:2602MB
+  MH:3462MB MU:2602MB F:860MB
+  Sim:258 (1.4/f) Max:2
+  AS  258x 558.5ms (2.2ms/c)
+  ICO 258x 558.4ms (2.2ms/c)
+  ET  425x 326.3ms (0.768ms/c)
+  GM2 18x 174.3ms (9.7ms/c)
+  GW  40x 0.5ms (0.013ms/c)
+  PCL 17247x 39.0ms (0.002ms/c)
+  CU  9004x 12.5ms (0.001ms/c)
+  US  55561x 6.9ms (0.000ms/c)
+  SS  178x 162.5ms (0.913ms/c)
+  ICOskip:11 ia:108
+  Alloc:36952KB/5s (7390KB/s)
+  A.AS:19080KB A.SS:3588KB A.Oth:14284KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=False TimeScale=16 Sim=2
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 167 (167act) FPS:121 Worst:27.9ms
+  Sp:0 (0gc) GC:0 M:2656MB
+  MH:3462MB MU:2656MB F:806MB
+  Sim:248 (1.5/f) Max:3
+  AS  248x 634.7ms (2.6ms/c)
+  ICO 248x 634.5ms (2.6ms/c)
+  ET  517x 375.9ms (0.727ms/c)
+  GM2 20x 195.3ms (9.8ms/c)
+  GW  41x 0.6ms (0.013ms/c)
+  PCL 17429x 42.9ms (0.002ms/c)
+  CU  9247x 14.1ms (0.002ms/c)
+  US  54764x 7.7ms (0.000ms/c)
+  SS  167x 199.7ms (1.2ms/c)
+  ICOskip:5 ia:112
+  Alloc:48416KB/5s (9683KB/s)
+  A.AS:25044KB A.SS:5428KB A.Oth:17944KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 36.4ms Sim:1
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 35.5ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 62.1ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 37.7ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 34.9ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 44.3ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 56.1ms Sim:3
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 37.5ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 34.0ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 35.3ms Sim:1
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=False TimeScale=16 Sim=2
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 86 (86act) FPS:53 Worst:62.1ms
+  Sp:10 (0gc) GC:0 M:2708MB
+  MH:3462MB MU:2707MB F:754MB
+  Sim:262 (3.0/f) Max:98
+  AS  262x 910.3ms (3.5ms/c)
+  ICO 214x 910.1ms (4.3ms/c)
+  ET  441x 577.8ms (1.3ms/c)
+  GM2 18x 316.1ms (17.6ms/c)
+  GW  39x 0.7ms (0.017ms/c)
+  PCL 18190x 58.7ms (0.003ms/c)
+  CU  9056x 19.3ms (0.002ms/c)
+  US  34857x 7.6ms (0.000ms/c)
+  SS  86x 190.4ms (2.2ms/c)
+  ICOskip:60 ia:123
+  Alloc:46908KB/5s (9382KB/s)
+  A.AS:27140KB A.SS:3724KB A.Oth:16044KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 148.0ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 103.6ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 33.4ms Sim:3
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 42.4ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 45.3ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 39.0ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 33.0ms Sim:2
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=False TimeScale=16 Sim=2
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 92 (92act) FPS:57 Worst:148.0ms
+  Sp:7 (0gc) GC:0 M:2763MB
+  MH:3462MB MU:2763MB F:699MB
+  Sim:170 (1.8/f) Max:3
+  AS  170x 710.1ms (4.2ms/c)
+  ICO 170x 710.0ms (4.2ms/c)
+  ET  399x 383.3ms (0.961ms/c)
+  GM2 12x 194.0ms (16.2ms/c)
+  GW  39x 0.8ms (0.021ms/c)
+  PCL 16832x 58.9ms (0.004ms/c)
+  CU  8795x 18.4ms (0.002ms/c)
+  US  44449x 23.7ms (0.001ms/c)
+  SS  92x 381.7ms (4.1ms/c)
+  ICOskip:8 ia:75
+  Alloc:51688KB/5s (10338KB/s)
+  A.AS:19832KB A.SS:15508KB A.Oth:16348KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 51.0ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 35.1ms Sim:2
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=False TimeScale=16 Sim=1
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 104 (104act) FPS:72 Worst:51.0ms
+  Sp:2 (0gc) GC:0 M:2807MB
+  MH:3462MB MU:2806MB F:656MB
+  Sim:185 (1.8/f) Max:3
+  AS  185x 733.1ms (4.0ms/c)
+  ICO 185x 733.0ms (4.0ms/c)
+  ET  349x 402.9ms (1.2ms/c)
+  GM2 19x 279.3ms (14.7ms/c)
+  GW  41x 0.7ms (0.018ms/c)
+  PCL 17505x 58.7ms (0.003ms/c)
+  CU  9034x 19.5ms (0.002ms/c)
+  US  38568x 8.2ms (0.000ms/c)
+  SS  104x 176.4ms (1.7ms/c)
+  ICOskip:14 ia:105
+  Alloc:40020KB/5s (8004KB/s)
+  A.AS:17800KB A.SS:3780KB A.Oth:18440KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 59.3ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 45.0ms Sim:1
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 151.0ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 81.0ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 34.2ms Sim:2
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=False TimeScale=16 Sim=2
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 93 (93act) FPS:54 Worst:151.0ms
+  Sp:5 (0gc) GC:0 M:2869MB
+  MH:3462MB MU:2868MB F:593MB
+  Sim:171 (1.8/f) Max:3
+  AS  171x 898.8ms (5.3ms/c)
+  ICO 171x 898.7ms (5.3ms/c)
+  ET  425x 567.1ms (1.3ms/c)
+  GM2 24x 349.7ms (14.6ms/c)
+  GW  39x 0.7ms (0.018ms/c)
+  PCL 17940x 57.0ms (0.003ms/c)
+  CU  8821x 19.0ms (0.002ms/c)
+  US  35933x 7.7ms (0.000ms/c)
+  SS  93x 311.5ms (3.3ms/c)
+  ICOskip:12 ia:146
+  Alloc:59216KB/5s (11843KB/s)
+  A.AS:28616KB A.SS:12348KB A.Oth:18252KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 42.4ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 37.2ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 34.0ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 35.4ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 97.5ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 39.1ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 34.9ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 93.1ms Sim:1
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 36.7ms Sim:3
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 35.2ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 35.8ms Sim:3
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=False TimeScale=16 Sim=2
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 90 (90act) FPS:52 Worst:97.5ms
+  Sp:11 (0gc) GC:0 M:2938MB
+  MH:3462MB MU:2937MB F:524MB
+  Sim:184 (2.0/f) Max:17
+  AS  184x 920.6ms (5.0ms/c)
+  ICO 184x 920.5ms (5.0ms/c)
+  ET  441x 573.7ms (1.3ms/c)
+  GM2 17x 260.0ms (15.3ms/c)
+  GW  39x 0.7ms (0.018ms/c)
+  PCL 18820x 59.4ms (0.003ms/c)
+  CU  9073x 20.3ms (0.002ms/c)
+  US  42926x 23.5ms (0.001ms/c)
+  SS  90x 268.3ms (3.0ms/c)
+  ICOskip:30 ia:115
+  Alloc:62992KB/5s (12598KB/s)
+  A.AS:36860KB A.SS:8012KB A.Oth:18120KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 45.7ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 36.8ms Sim:3
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 42.2ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 34.5ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 47.5ms Sim:2
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=False TimeScale=16 Sim=2
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 101 (101act) FPS:64 Worst:47.5ms
+  Sp:5 (0gc) GC:0 M:2996MB
+  MH:3462MB MU:2996MB F:466MB
+  Sim:181 (1.8/f) Max:3
+  AS  181x 872.8ms (4.8ms/c)
+  ICO 181x 872.7ms (4.8ms/c)
+  ET  461x 513.4ms (1.1ms/c)
+  GM2 17x 248.1ms (14.6ms/c)
+  GW  40x 0.7ms (0.018ms/c)
+  PCL 19068x 59.6ms (0.003ms/c)
+  CU  9105x 19.2ms (0.002ms/c)
+  US  38460x 8.2ms (0.000ms/c)
+  SS  101x 160.5ms (1.6ms/c)
+  ICOskip:12 ia:104
+  Alloc:53680KB/5s (10736KB/s)
+  A.AS:31612KB A.SS:2856KB A.Oth:19212KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 60.1ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 38.0ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 59.6ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 34.4ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 48.5ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 33.1ms Sim:2
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=False TimeScale=16 Sim=2
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 93 (93act) FPS:57 Worst:60.1ms
+  Sp:6 (0gc) GC:0 M:3054MB
+  MH:3462MB MU:3054MB F:408MB
+  Sim:174 (1.9/f) Max:3
+  AS  174x 889.5ms (5.1ms/c)
+  ICO 174x 889.4ms (5.1ms/c)
+  ET  461x 545.1ms (1.2ms/c)
+  GM2 17x 247.2ms (14.5ms/c)
+  GW  41x 0.8ms (0.018ms/c)
+  PCL 17610x 60.2ms (0.003ms/c)
+  CU  9105x 20.2ms (0.002ms/c)
+  US  35951x 7.9ms (0.000ms/c)
+  SS  93x 211.3ms (2.3ms/c)
+  ICOskip:16 ia:98
+  Alloc:53648KB/5s (10730KB/s)
+  A.AS:31248KB A.SS:4580KB A.Oth:17820KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 63.7ms Sim:1
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 40.7ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 38.2ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 59.4ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 33.5ms Sim:2
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=False TimeScale=16 Sim=2
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 92 (92act) FPS:59 Worst:63.7ms
+  Sp:5 (0gc) GC:0 M:3107MB
+  MH:3462MB MU:3107MB F:355MB
+  Sim:172 (1.9/f) Max:3
+  AS  172x 830.4ms (4.8ms/c)
+  ICO 172x 830.2ms (4.8ms/c)
+  ET  355x 487.4ms (1.4ms/c)
+  GM2 14x 257.8ms (18.4ms/c)
+  GW  40x 0.8ms (0.019ms/c)
+  PCL 18344x 59.5ms (0.003ms/c)
+  CU  9092x 20.3ms (0.002ms/c)
+  US  36125x 7.8ms (0.000ms/c)
+  SS  92x 213.7ms (2.3ms/c)
+  ICOskip:13 ia:104
+  Alloc:48180KB/5s (9636KB/s)
+  A.AS:25604KB A.SS:4092KB A.Oth:18484KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 39.6ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 46.3ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 69.8ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 41.3ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 42.1ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 94.9ms Sim:3
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 45.7ms Sim:2
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=False TimeScale=16 Sim=2
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 108 (108act) FPS:66 Worst:94.9ms
+  Sp:7 (0gc) GC:0 M:3171MB
+  MH:3462MB MU:3170MB F:291MB
+  Sim:187 (1.7/f) Max:3
+  AS  187x 832.5ms (4.5ms/c)
+  ICO 187x 832.3ms (4.5ms/c)
+  ET  486x 486.3ms (1.0ms/c)
+  GM2 14x 249.7ms (17.8ms/c)
+  GW  40x 0.7ms (0.017ms/c)
+  PCL 17669x 101.5ms (0.006ms/c)
+  CU  9104x 17.9ms (0.002ms/c)
+  US  47662x 21.9ms (0.000ms/c)
+  SS  108x 261.4ms (2.4ms/c)
+  ICOskip:13 ia:94
+  Alloc:58280KB/5s (11656KB/s)
+  A.AS:29280KB A.SS:9108KB A.Oth:19892KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=False TimeScale=16 Sim=2
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 177 (177act) FPS:138 Worst:24.7ms
+  Sp:0 (0gc) GC:0 M:3232MB
+  MH:3462MB MU:3232MB F:230MB
+  Sim:257 (1.5/f) Max:2
+  AS  257x 527.8ms (2.1ms/c)
+  ICO 257x 527.6ms (2.1ms/c)
+  ET  489x 292.2ms (0.598ms/c)
+  GM2 17x 174.6ms (10.3ms/c)
+  GW  40x 0.6ms (0.014ms/c)
+  PCL 17264x 40.3ms (0.002ms/c)
+  CU  9073x 13.0ms (0.001ms/c)
+  US  56676x 7.3ms (0.000ms/c)
+  SS  177x 197.5ms (1.1ms/c)
+  ICOskip:7 ia:133
+  Alloc:52764KB/5s (10553KB/s)
+  A.AS:23076KB A.SS:5828KB A.Oth:23860KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=False TimeScale=16 Sim=2
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 180 (180act) FPS:151 Worst:27.4ms
+  Sp:0 (0gc) GC:0 M:3284MB
+  MH:3462MB MU:3283MB F:179MB
+  Sim:260 (1.4/f) Max:2
+  AS  260x 494.2ms (1.9ms/c)
+  ICO 260x 494.1ms (1.9ms/c)
+  ET  538x 250.3ms (0.465ms/c)
+  GM2 14x 128.1ms (9.1ms/c)
+  GW  40x 0.6ms (0.014ms/c)
+  PCL 17343x 40.8ms (0.002ms/c)
+  CU  9132x 13.9ms (0.002ms/c)
+  US  58406x 8.1ms (0.000ms/c)
+  SS  180x 149.1ms (0.828ms/c)
+  ICOskip:4 ia:67
+  Alloc:46524KB/5s (9305KB/s)
+  A.AS:18740KB A.SS:3348KB A.Oth:24436KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=True TimeScale=16 Sim=0
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 214 (29act) FPS:508 Worst:21.0ms
+  Sp:0 (0gc) GC:0 M:3298MB
+  MH:3462MB MU:3298MB F:164MB
+  Sim:43 (0.2/f) Max:2
+  AS  43x 95.9ms (2.2ms/c)
+  ICO 43x 95.9ms (2.2ms/c)
+  ET  77x 54.8ms (0.712ms/c)
+  GM2 3x 42.5ms (14.2ms/c)
+  GW  7x 0.1ms (0.014ms/c)
+  PCL 2985x 7.0ms (0.002ms/c)
+  CU  1590x 2.2ms (0.001ms/c)
+  US  9548x 1.3ms (0.000ms/c)
+  SS  214x 57.8ms (0.270ms/c)
+  ICOskip:1 ia:27
+  Alloc:8896KB/5s (1779KB/s)
+  A.AS:3280KB A.SS:808KB A.Oth:4808KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 39.4ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 42.9ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 37.0ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 38.2ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 36.6ms Sim:1
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=False TimeScale=16 Sim=1
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 112 (89act) FPS:84 Worst:42.9ms
+  Sp:5 (0gc) GC:0 M:3341MB
+  MH:3462MB MU:3341MB F:121MB
+  Sim:158 (1.4/f) Max:3
+  AS  158x 682.5ms (4.3ms/c)
+  ICO 158x 682.4ms (4.3ms/c)
+  ET  458x 400.8ms (0.875ms/c)
+  GM2 16x 236.7ms (14.8ms/c)
+  GW  34x 0.6ms (0.018ms/c)
+  PCL 14905x 49.4ms (0.003ms/c)
+  CU  7744x 16.1ms (0.002ms/c)
+  US  34092x 7.2ms (0.000ms/c)
+  SS  112x 165.4ms (1.5ms/c)
+  ICOskip:8 ia:87
+  Alloc:41592KB/5s (8318KB/s)
+  A.AS:20688KB A.SS:3648KB A.Oth:17256KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 72.2ms Sim:1
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 43.4ms Sim:3
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 36.5ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 1160.3ms [GCx1] Sim:2
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=False TimeScale=16 Sim=2
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 80 (80act) FPS:36 Worst:1160.3ms
+  Sp:4 (1gc) GC:1 M:2571MB
+  MH:3462MB MU:2570MB F:891MB
+  Sim:143 (1.8/f) Max:3
+  AS  143x 466.1ms (3.3ms/c)
+  ICO 143x 466.0ms (3.3ms/c)
+  ET  407x 204.0ms (0.501ms/c)
+  GM2 7x 81.0ms (11.6ms/c)
+  GW  32x 0.6ms (0.018ms/c)
+  PCL 13625x 45.5ms (0.003ms/c)
+  CU  7266x 15.4ms (0.002ms/c)
+  US  39616x 16.8ms (0.000ms/c)
+  SS  80x 172.5ms (2.2ms/c)
+  ICOskip:4 ia:28
+  Alloc:32140KB/5s (6428KB/s)
+  A.AS:10768KB A.SS:6904KB A.Oth:14468KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=False TimeScale=16 Sim=2
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 108 (108act) FPS:77 Worst:29.8ms
+  Sp:0 (0gc) GC:0 M:2577MB
+  MH:3462MB MU:2577MB F:885MB
+  Sim:188 (1.7/f) Max:2
+  AS  188x 696.9ms (3.7ms/c)
+  ICO 188x 696.7ms (3.7ms/c)
+  ET  592x 363.9ms (0.615ms/c)
+  GM2 15x 172.5ms (11.5ms/c)
+  GW  40x 0.7ms (0.018ms/c)
+  PCL 17466x 59.0ms (0.003ms/c)
+  CU  9098x 20.4ms (0.002ms/c)
+  US  40006x 8.3ms (0.000ms/c)
+  SS  108x 186.2ms (1.7ms/c)
+  ICOskip:12 ia:83
+  Alloc:6488KB/5s (1298KB/s)
+  A.AS:3016KB A.SS:2408KB A.Oth:1064KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 45.3ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 37.1ms Sim:1
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 36.9ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 40.2ms Sim:2
+[Info   :Ostranauts Performance Optimizer] [DIAG] loaded=True paused=False TimeScale=16 Sim=2
+[Info   :Ostranauts Performance Optimizer] 
+=== PERF v7.5 (5s) ===
+  Fr: 101 (101act) FPS:72 Worst:45.3ms
+  Sp:4 (0gc) GC:0 M:2587MB
+  MH:3462MB MU:2587MB F:875MB
+  Sim:194 (1.9/f) Max:14
+  AS  194x 693.3ms (3.6ms/c)
+  ICO 194x 693.2ms (3.6ms/c)
+  ET  573x 354.2ms (0.618ms/c)
+  GM2 9x 148.2ms (16.5ms/c)
+  GW  41x 0.8ms (0.019ms/c)
+  PCL 17476x 60.3ms (0.003ms/c)
+  CU  9070x 19.8ms (0.002ms/c)
+  US  39868x 8.8ms (0.000ms/c)
+  SS  101x 177.1ms (1.8ms/c)
+  ICOskip:18 ia:68
+  Alloc:8328KB/5s (1666KB/s)
+  A.AS:4088KB A.SS:1844KB A.Oth:2396KB
+  Heap: H:2374>3462MB +1088MB Free=1141MB
+=================
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 33.3ms Sim:1
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 46.4ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 54.0ms Sim:2
+[Warning:Ostranauts Performance Optimizer] [SPIKE] 46.1ms Sim:2
