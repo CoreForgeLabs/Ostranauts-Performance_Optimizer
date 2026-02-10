@@ -131,7 +131,7 @@ After first launch, config files appear in `BepInEx\config\`:
 
 ### 🔧 What's included / Что входит
 
-#### SaveForce v1.12.0 — Save Load Optimization
+#### SaveForce — Save Load Optimization
 
 16 Harmony patches that reduce save loading from ~72–82s to ~33s (56–60% faster):
 
@@ -145,13 +145,13 @@ After first launch, config files appear in `BepInEx\config\`:
 - **Inter-batch GC** — garbage collection between load batches
 - **Profiling** — detailed timing logs in BepInEx console
 
-#### OstronautsOptimizer v8.0.0 — Runtime Optimization
+#### OstronautsOptimizer — Runtime Optimization
 
 - **Heap Pre-Expansion** — expands Mono heap post-load, GC triggers every ~100s instead of ~5s
 - **Sim Loop Throttling** — prevents simulation from consuming entire frame budget
 - **Allocation Reduction** — LINQ → direct access, query caching
 
-#### Run v1.0.0 — Auto-Load
+#### Run — Auto-Load
 
 - Flag-file based auto-load via `RUNSAVE.bat`
 - Or config-based auto-load on every launch
@@ -265,10 +265,8 @@ cd BUILD
 .\BUILD_AND_RUN.bat    # То же что run.ps1, но .bat
 ```
 
-Требования: .NET Framework 4+ (csc.exe), BepInEx 5.4.23.2 в папке игры.
-
 ---
 
 <p align="center">
-  <sub>© 2025 CoreForgeLabs</sub>
+  <sub>© 2026 CoreForgeLabs</sub>
 </p>
