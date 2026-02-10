@@ -13,11 +13,38 @@
 </p>
 
 <p align="center">
+  <a href="#-support--поддержка">❤️ Support</a> •
   <a href="#-download--скачать">⬇️ Download</a> •
   <a href="#-installation--установка">📦 Install</a> •
-  <a href="#-whats-included--что-входит">🔧 What's included</a> •
-  <a href="#-support--поддержка">❤️ Support</a>
+  <a href="#-whats-included--что-входит">🔧 What's included</a>
 </p>
+
+---
+
+## ❤️ Support / Поддержка
+
+<p align="center">
+  <b>Made with love by <a href="https://t.me/CoreForgeLabs">@CoreForgeLabs</a></b><br/>
+  Telegram · Discord
+</p>
+
+This is one of my favorite games, and I truly want to grow our small community.
+Your support motivates me to keep developing and improving the mod.
+
+Это одна из моих любимых игр, и я хочу развивать наше сообщество.
+Ваша поддержка — это мотивация продолжать работу над проектом.
+
+| | |
+|--------|---------|
+| **Boosty** | [boosty.to/coreforgelabs](https://boosty.to/coreforgelabs) |
+| **Tbank** | `2200 7013 8955 0366` |
+| **BTC** | `bc1qjzw4nz6y0dl3pvy8v46j70yywsh4l78sg0eq3x` |
+| **ETH / USDT / USDC (ERC-20)** | `0xc9B7c16ef301E6277BbEB28C9AfCEC7c107d244E` |
+
+**Besides modding / Помимо модов:**
+🤖 Telegram/Discord bots • ⚙️ Automation • 🔗 Integrations • 🌍 Game translations
+
+**Feel free to reach out! / Пишите — отвечу всем! :)**
 
 ---
 
@@ -104,7 +131,7 @@ After first launch, config files appear in `BepInEx\config\`:
 
 ### 🔧 What's included / Что входит
 
-#### SaveForce v1.11.0 — Save Load Optimization
+#### SaveForce v1.12.0 — Save Load Optimization
 
 16 Harmony patches that reduce save loading from ~72–82s to ~33s (56–60% faster):
 
@@ -239,44 +266,6 @@ cd BUILD
 ```
 
 Требования: .NET Framework 4+ (csc.exe), BepInEx 5.4.23.2 в папке игры.
-
----
-
-## ❤️ Support / Поддержка
-
-<p align="center">
-  <b>Made with love by <a href="https://t.me/CoreForgeLabs">@CoreForgeLabs</a></b><br/>
-  Telegram · Discord
-</p>
-
-This is one of my favorite games, and I truly want to grow our small community.
-Your support motivates me to keep developing and improving the mod.
-
-Это одна из моих любимых игр, и я хочу развивать наше сообщество.
-Ваша поддержка — это мотивация продолжать работу над проектом.
-
----
-
-**Besides modding, I also do / Помимо модов, я занимаюсь:**
-- 🤖 Telegram / Discord bots
-- ⚙️ Scripts & automation utilities
-- 🔗 Integrations & data parsing
-- 🌍 Game translations
-- And more / И многое другое!
-
-**Feel free to reach out — I'll reply to everyone!**
-**Пишите — отвечу всем! :)**
-
----
-
-### 💰 Donations / Донаты
-
-| Method | Details |
-|--------|---------|
-| **Boosty** | [boosty.to/coreforgelabs](https://boosty.to/coreforgelabs) |
-| **Tbank** | `2200 7013 8955 0366` |
-| **BTC** | `bc1qjzw4nz6y0dl3pvy8v46j70yywsh4l78sg0eq3x` |
-| **ETH / USDT / USDC (ERC-20)** | `0xc9B7c16ef301E6277BbEB28C9AfCEC7c107d244E` |
 
 ---
 
