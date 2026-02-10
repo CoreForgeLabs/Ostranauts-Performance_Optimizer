@@ -231,6 +231,31 @@ namespace SaveForce
         internal static void PrintProfile()
         {
             s_isLoading = false;
+
+            // Post-load fixup: ensure no GasContainer has null dicts
+            try
+            {
+                var gcs = UnityEngine.Object.FindObjectsOfType<GasContainer>();
+                int fixedCount = 0;
+                for (int i = 0; i < gcs.Length; i++)
+                {
+                    if (gcs[i].mapDGasMols == null)
+                    {
+                        gcs[i].mapDGasMols = new Dictionary<string, double>();
+                        fixedCount++;
+                    }
+                    if (gcs[i].mapGasMols1 == null)
+                    {
+                        gcs[i].mapGasMols1 = new Dictionary<string, double>();
+                        fixedCount++;
+                    }
+                }
+                if (fixedCount > 0)
+                    Log.LogWarning("[FIXUP] Initialized " + fixedCount +
+                        " null gas container dicts across " + gcs.Length + " containers");
+            }
+            catch (Exception ex) { Log.LogWarning("[FIXUP] Gas check: " + ex.Message); }
+
             StringBuilder sb = new StringBuilder();
             sb.AppendLine("=== SaveForce LOAD PROFILE ===");
             sb.AppendLine("  TOTAL:         " + sw_Total.ElapsedMilliseconds + " ms");
@@ -648,7 +673,15 @@ namespace SaveForce
             Condition template;
             if (s_cache.TryGetValue(strName, out template))
             {
-                __result = (Condition)s_cloneDelegate(template);
+                var clone = (Condition)s_cloneDelegate(template);
+                // Deep-clone mutable reference fields to prevent shared state
+                if (template.aNext != null)
+                    clone.aNext = new List<CondTrigger>(template.aNext);
+                if (template.aPer != null)
+                    clone.aPer = new List<string>(template.aPer);
+                if (template.replacementValues != null)
+                    clone.replacementValues = new List<InflectedTokenData>(template.replacementValues);
+                __result = clone;
                 s_hits++;
                 return false;
             }
@@ -659,7 +692,16 @@ namespace SaveForce
         static void Postfix(string strName, Condition __result)
         {
             if (__result != null && strName != null && !s_cache.ContainsKey(strName))
-                s_cache[strName] = (Condition)s_cloneDelegate(__result);
+            {
+                var template = (Condition)s_cloneDelegate(__result);
+                if (__result.aNext != null)
+                    template.aNext = new List<CondTrigger>(__result.aNext);
+                if (__result.aPer != null)
+                    template.aPer = new List<string>(__result.aPer);
+                if (__result.replacementValues != null)
+                    template.replacementValues = new List<InflectedTokenData>(__result.replacementValues);
+                s_cache[strName] = template;
+            }
         }
 
         internal static void ClearCache()
@@ -788,7 +830,11 @@ namespace SaveForce
             CondRule template;
             if (s_cache.TryGetValue(strDef, out template))
             {
-                __result = (CondRule)s_clone(template);
+                var clone = (CondRule)s_clone(template);
+                // Deep-clone threshold array to prevent shared state
+                if (template.aThresholds != null)
+                    clone.aThresholds = (CondRuleThresh[])template.aThresholds.Clone();
+                __result = clone;
                 s_hits++;
                 return false;
             }
@@ -800,7 +846,12 @@ namespace SaveForce
         static void Postfix(string strDef, CondRule __result)
         {
             if (__result != null && strDef != null && !s_cache.ContainsKey(strDef))
-                s_cache[strDef] = (CondRule)s_clone(__result);
+            {
+                var template = (CondRule)s_clone(__result);
+                if (__result.aThresholds != null)
+                    template.aThresholds = (CondRuleThresh[])__result.aThresholds.Clone();
+                s_cache[strDef] = template;
+            }
         }
 
         internal static void ClearCache()
