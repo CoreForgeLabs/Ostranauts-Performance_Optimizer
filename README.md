@@ -167,9 +167,6 @@ cd BUILD
 .\pack.ps1             # Build + create distribution ZIP
 .\BUILD_AND_RUN.bat    # Same as run.ps1, but as .bat
 ```
-
-Requirements: .NET Framework 4+ (csc.exe), BepInEx 5.4.23.2 installed in game folder.
-
 ---
 
 ## 🇷🇺 Русский
