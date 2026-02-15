@@ -1,5 +1,5 @@
 ============================================================
-  Ostranauts Performance Optimizer v2
+  Ostranauts Performance Optimizer v2.1
   Made with love by @CoreForgeLabs (telegram)
 ============================================================
 

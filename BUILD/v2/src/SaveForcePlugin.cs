@@ -31,7 +31,7 @@ namespace SaveForce
     {
         public const string GUID = "com.coreforgelabs.saveforce";
         public const string NAME = "SaveForce";
-        public const string VERSION = "1.11.0";
+        public const string VERSION = "1.12.0";
 
         internal static ManualLogSource Log;
         internal static ConfigEntry<bool> CfgParallelShips;
@@ -52,6 +52,7 @@ namespace SaveForce
         internal static Dictionary<string, JsonShip> s_parsedShipsCache;
         internal static Dictionary<string, byte[]> s_originalShipBytes;
         internal static Dictionary<string, byte[]> s_dictFilesRef;
+        internal static JsonCondOwnerSave[] s_cachedCOSaves;
 
         // GetCondOwner profiling
         internal static Stopwatch sw_GetCondOwner = new Stopwatch();
@@ -328,6 +329,7 @@ namespace SaveForce
             s_parsedShipsCache = null;
             s_originalShipBytes = null;
             s_dictFilesRef = null;
+            s_cachedCOSaves = null;
         }
     }
 
@@ -414,16 +416,33 @@ namespace SaveForce
         static void Prefix()
         {
             try { Patch_GetCond_TemplateCache.ClearCache(); } catch { }
-            // v1.8.0: Clear parse cache
             try { Patch_LootParseCache.ClearCache(); } catch { }
             try { Patch_CondRuleCache.ClearCache(); } catch { }
             SaveForcePlugin.sw_MainJson.Start();
         }
-        static void Postfix()
+        static void Postfix(object __result)
         {
             SaveForcePlugin.sw_MainJson.Stop();
             SaveForcePlugin.Log.LogInfo("[PROFILE] Main JSON parsed in " +
                 SaveForcePlugin.sw_MainJson.ElapsedMilliseconds + " ms");
+
+            // v1.12.0: Capture aCOs from JsonGameSave for later dictCOSaves rebuild
+            if (__result != null && SaveForcePlugin.CfgParallelShips.Value)
+            {
+                try
+                {
+                    var prop = __result.GetType().GetProperty("aCOs");
+                    if (prop != null)
+                    {
+                        SaveForcePlugin.s_cachedCOSaves = prop.GetValue(__result, null)
+                            as JsonCondOwnerSave[];
+                        if (SaveForcePlugin.s_cachedCOSaves != null)
+                            SaveForcePlugin.Log.LogInfo("[OPT] Captured " +
+                                SaveForcePlugin.s_cachedCOSaves.Length + " CO saves for rebuild");
+                    }
+                }
+                catch (Exception ex) { SaveForcePlugin.Log.LogWarning("[OPT] aCOs capture: " + ex.Message); }
+            }
         }
     }
 
@@ -461,6 +480,7 @@ namespace SaveForce
 
             if (!SaveForcePlugin.CfgParallelShips.Value) return;
 
+            // Find dictFiles argument
             Dictionary<string, byte[]> dictFiles = null;
             if (__args != null)
                 for (int i = 0; i < __args.Length; i++)
@@ -475,24 +495,22 @@ namespace SaveForce
 
             if (dictFiles == null) { SaveForcePlugin.Log.LogWarning("[OPT] dictFiles NOT found!"); return; }
 
+            // Collect ship file keys (same filter as DoLoadGame uses)
             List<string> shipKeys = new List<string>();
             foreach (string key in dictFiles.Keys)
-                if (key.Contains("ships/") && !key.Contains(".png"))
+                if (key.IndexOf("ships/") >= 0 && System.IO.Path.GetExtension(key) != ".png")
                     shipKeys.Add(key);
 
             if (shipKeys.Count == 0) return;
 
             SaveForcePlugin.Log.LogInfo("[OPT] Parallel parsing " + shipKeys.Count + " ship files...");
 
-            var originalBytes = new Dictionary<string, byte[]>(shipKeys.Count);
-            byte[] emptyJson = Encoding.UTF8.GetBytes("[]");
-            for (int i = 0; i < shipKeys.Count; i++)
-            {
-                originalBytes[shipKeys[i]] = dictFiles[shipKeys[i]];
-                dictFiles[shipKeys[i]] = emptyJson;
-            }
-
-            var parsedShips = new Dictionary<string, JsonShip>();
+            // v1.12.0: Parse ships in parallel, then replace dictFiles entries with []
+            // so DoLoadGame's ship loop runs instantly (empty arrays).
+            // Parsed ships are stored in s_parsedShipsCache for injection in Patch_SystemInit.
+            // dictCOSaves is also rebuilt there from s_cachedCOSaves.
+            var allShips = new Dictionary<string, JsonShip>();
+            var origBytes = new Dictionary<string, byte[]>(shipKeys.Count);
             object lockObj = new object();
             int remaining = shipKeys.Count;
             int errors = 0;
@@ -502,20 +520,21 @@ namespace SaveForce
             for (int i = 0; i < shipKeys.Count; i++)
             {
                 string thisKey = shipKeys[i];
-                byte[] thisBytes = originalBytes[thisKey];
+                byte[] thisBytes = dictFiles[thisKey];
+                origBytes[thisKey] = thisBytes;
                 ThreadPool.QueueUserWorkItem(delegate
                 {
                     try
                     {
                         string json = Encoding.UTF8.GetString(thisBytes);
                         JsonShip[] ships = JsonMapper.ToObject<JsonShip[]>(json);
-                        if (ships != null && ships.Length > 0)
+                        if (ships != null)
                         {
                             lock (lockObj)
                             {
                                 for (int j = 0; j < ships.Length; j++)
                                     if (ships[j] != null && ships[j].strName != null)
-                                        parsedShips[ships[j].strName] = ships[j];
+                                        allShips[ships[j].strName] = ships[j];
                             }
                         }
                     }
@@ -530,25 +549,23 @@ namespace SaveForce
 
             if (errors > shipKeys.Count / 2)
             {
-                SaveForcePlugin.Log.LogError("[OPT] Too many parse errors, falling back");
-                for (int i = 0; i < shipKeys.Count; i++)
-                    dictFiles[shipKeys[i]] = originalBytes[shipKeys[i]];
+                SaveForcePlugin.Log.LogError("[OPT] Too many parse errors (" + errors + "/" + shipKeys.Count + "), falling back to sequential");
                 return;
             }
 
-            SaveForcePlugin.s_parsedShipsCache = parsedShips;
-            SaveForcePlugin.s_originalShipBytes = originalBytes;
-            SaveForcePlugin.s_dictFilesRef = dictFiles;
-
-            SaveForcePlugin.Log.LogInfo("[OPT] Parallel parse: " + parsedShips.Count + " ships in " + sw.ElapsedMilliseconds + " ms" +
+            SaveForcePlugin.Log.LogInfo("[OPT] Parallel parse: " + allShips.Count + " ships from " +
+                shipKeys.Count + " files in " + sw.ElapsedMilliseconds + " ms" +
                 (errors > 0 ? " (" + errors + " errors)" : ""));
 
-            var gcSw = Stopwatch.StartNew();
-            GC.Collect();
-            GC.WaitForPendingFinalizers();
-            GC.Collect();
-            gcSw.Stop();
-            SaveForcePlugin.Log.LogInfo("[OPT] Post-parse GC: " + gcSw.ElapsedMilliseconds + " ms");
+            // Replace ship bytes with empty JSON array so DoLoadGame skips parsing
+            byte[] emptyBytes = Encoding.UTF8.GetBytes("[]");
+            for (int i = 0; i < shipKeys.Count; i++)
+                dictFiles[shipKeys[i]] = emptyBytes;
+
+            // Store for Patch_SystemInit to inject
+            SaveForcePlugin.s_parsedShipsCache = allShips;
+            SaveForcePlugin.s_originalShipBytes = origBytes;
+            SaveForcePlugin.s_dictFilesRef = dictFiles;
         }
     }
 
@@ -558,6 +575,10 @@ namespace SaveForce
     {
         static void Prefix(ref JsonShip[] __1)
         {
+            // v1.12.0: Inject cached ships AND rebuild DataHandler.dictCOSaves.
+            // DoLoadGame replaced ship bytes with [] so its ship loop ran instantly,
+            // but that left aShips empty and dictCOSaves empty (all COs orphaned).
+            // We fix both here before StarSystem.Init runs.
             if (SaveForcePlugin.s_parsedShipsCache != null &&
                 SaveForcePlugin.s_parsedShipsCache.Count > 0)
             {
@@ -567,8 +588,41 @@ namespace SaveForce
                 __1 = cached;
                 SaveForcePlugin.Log.LogInfo("[OPT] Injected " + cached.Length + " ships (was " + origCount + ")");
                 SaveForcePlugin.s_parsedShipsCache = null;
+
+                // Rebuild DataHandler.dictCOSaves with correct ship data.
+                // DoLoadGame already did dictCOSaves.Clear() + orphan check with empty aShips,
+                // resulting in 0 entries. We redo it with the real ships.
+                if (SaveForcePlugin.s_cachedCOSaves != null)
+                {
+                    DataHandler.dictCOSaves.Clear();
+                    int nSkippedCOs = 0;
+                    var aCOs = SaveForcePlugin.s_cachedCOSaves;
+                    for (int i = 0; i < aCOs.Length; i++)
+                    {
+                        var jcos = aCOs[i];
+                        if (string.IsNullOrEmpty(jcos.strRegIDLast))
+                        {
+                            nSkippedCOs++;
+                            continue;
+                        }
+                        bool found = false;
+                        for (int j = 0; j < cached.Length; j++)
+                        {
+                            if (cached[j].strRegID == jcos.strRegIDLast)
+                            { found = true; break; }
+                        }
+                        if (found)
+                            DataHandler.dictCOSaves[jcos.strID] = jcos;
+                        else
+                            nSkippedCOs++;
+                    }
+                    SaveForcePlugin.Log.LogInfo("[OPT] Rebuilt dictCOSaves: " +
+                        DataHandler.dictCOSaves.Count + " entries, " + nSkippedCOs + " orphaned");
+                    SaveForcePlugin.s_cachedCOSaves = null;
+                }
             }
 
+            // Restore original ship bytes in dictFiles
             if (SaveForcePlugin.s_originalShipBytes != null && SaveForcePlugin.s_dictFilesRef != null)
             {
                 foreach (var kv in SaveForcePlugin.s_originalShipBytes)
@@ -585,7 +639,7 @@ namespace SaveForce
                 GC.Collect();
                 gcSw.Stop();
                 SaveForcePlugin.Log.LogInfo("[OPT] Pre-spawn GC: " + gcSw.ElapsedMilliseconds + " ms");
-    
+
                 SaveForcePlugin.sw_SystemInit.Start();
             }
         }
