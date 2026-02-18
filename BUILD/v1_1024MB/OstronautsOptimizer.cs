@@ -136,17 +136,17 @@ namespace OstronautsOptimizer
                 "0=disabled. 2048=aggressive. " +
                 "3072=balanced (default). 4096=relaxed.");
             CfgGCIntervalSec = Config.Bind("GC",
-                "GCIntervalSec", 120,
+                "GCIntervalSec", 0,
                 "Min seconds between forced GC runs. " +
-                "Lower=more responsive but more pauses. " +
-                "0=disabled periodic GC. 60=aggressive. " +
-                "120=default. 300=relaxed.");
+                "Each forced GC causes a ~2s freeze. " +
+                "0=disabled (default, recommended). " +
+                "300=light. 120=moderate. 60=aggressive.");
             CfgMinFreeMB = Config.Bind("GC",
-                "MinFreeMB", 256,
+                "MinFreeMB", 0,
                 "If free heap space drops below this, " +
-                "force GC even before interval expires. " +
-                "Keeps a cushion of free memory. " +
-                "0=disabled. 128=tight. 256=default.");
+                "force GC (causes ~2s freeze). " +
+                "0=disabled (default, recommended). " +
+                "128=tight. 256=moderate.");
 
             if (CfgMaxDeltaTime.Value > 0f)
             {
