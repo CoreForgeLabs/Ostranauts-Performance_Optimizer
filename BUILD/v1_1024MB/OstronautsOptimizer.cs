@@ -1,9 +1,10 @@
-// OstronautsOptimizer v8.0.0 — Heap Pre-Expansion + Memory Ceiling
+﻿// OstronautsOptimizer v8.1.0 — Heap Pre-Expansion + Memory Ceiling
 // Key insight: Boehm GC stop-the-world ~800ms on 2.3GB heap every ~5s
 // because free space is only 3-28MB and alloc rate is ~5MB/s.
 // Solution: after load, allocate+free ~256MB to permanently expand heap.
 // Result: GC free space ~256MB → GC every ~50s instead of 5s.
 // v8.0: Added memory ceiling to prevent unbounded heap growth (7GB+ leak).
+// v8.1: Adaptive ceiling — auto-raises if Boehm can't compact below target.
 //   Periodic forced GC when heap exceeds ceiling or free space is too low.
 using System;
 using System.Collections;
@@ -21,7 +22,7 @@ using UnityEngine;
 namespace OstronautsOptimizer
 {
     [BepInPlugin("com.perf.ostranauts.optimizer",
-        "Ostranauts Performance Optimizer", "8.0.0")]
+        "Ostranauts Performance Optimizer", "8.1.0")]
     public class OptimizerPlugin : BaseUnityPlugin
     {
         internal static ManualLogSource Log;
@@ -41,6 +42,8 @@ namespace OstronautsOptimizer
         private static int s_forcedGCCount = 0;
         private static long s_lastHeapAfterGC = 0;
         private static bool s_ceilingWarned = false;
+        private static int s_ceilingFailStreak = 0;
+        private static long s_effectiveCeilingMB = 0; // 0=use config
 
         // P/Invoke for Mono GC diagnostics
         [DllImport("mono", EntryPoint="mono_gc_get_heap_size")]
@@ -202,7 +205,7 @@ namespace OstronautsOptimizer
                 }
             }
 
-            Log.LogInfo("=== Optimizer v8.0.0 (" +
+            Log.LogInfo("=== Optimizer v8.1.0 (" +
                 ok + "/" + patches.Length + " patches) ===");
             Log.LogInfo("  FirstOrDefault=" +
                 CfgFirstOrDefault.Value +
@@ -277,7 +280,10 @@ namespace OstronautsOptimizer
 
             long heapMB = heap / 1048576;
             long freeMB = free / 1048576;
-            int ceiling = CfgMemCeilingMB.Value;
+            int cfgCeiling = CfgMemCeilingMB.Value;
+            // Use adaptive ceiling if raised
+            long ceiling = s_effectiveCeilingMB > 0
+                ? s_effectiveCeilingMB : cfgCeiling;
             int minFree = CfgMinFreeMB.Value;
             int interval = CfgGCIntervalSec.Value;
 
@@ -326,27 +332,43 @@ namespace OstronautsOptimizer
             s_forcedGCCount++;
             s_lastHeapAfterGC = hAfter;
 
+            long hAfterMB = hAfter / 1048576;
+
             Log.LogInfo("[GC-CEIL] #" + s_forcedGCCount +
                 " " + reason +
                 " H:" + (hBefore / 1048576) + ">" +
-                (hAfter / 1048576) + "MB" +
+                hAfterMB + "MB" +
                 " U:" + (uBefore / 1048576) + ">" +
                 (uAfter / 1048576) + "MB" +
                 " Free:" + (fAfter / 1048576) + "MB" +
                 " Reclaimed:" + (reclaimed / 1048576) +
                 "MB");
 
-            // Warning: if GC reclaimed less than 10%
-            // it means objects are genuinely live
-            if (reclaimed < uBefore / 10 &&
-                heapMB > ceiling && !s_ceilingWarned)
+            // Adaptive ceiling: if heap still above
+            // ceiling after GC, Boehm can't shrink it.
+            // After 3 failures, raise ceiling to avoid
+            // repeated useless GC pauses.
+            if (ceiling > 0 && hAfterMB > ceiling)
             {
-                s_ceilingWarned = true;
-                Log.LogWarning(
-                    "[GC-CEIL] Low reclaim rate! " +
-                    "Most objects are live. " +
-                    "Consider increasing MemCeilingMB " +
-                    "or this is a game-side leak.");
+                s_ceilingFailStreak++;
+                if (s_ceilingFailStreak >= 3)
+                {
+                    long newCeiling = hAfterMB + 512;
+                    Log.LogWarning(
+                        "[GC-CEIL] Heap " + hAfterMB +
+                        "MB stuck above ceiling " +
+                        ceiling + "MB after " +
+                        s_ceilingFailStreak +
+                        " GCs. Boehm can't compact." +
+                        " Auto-raising ceiling to " +
+                        newCeiling + "MB");
+                    s_effectiveCeilingMB = newCeiling;
+                    s_ceilingFailStreak = 0;
+                }
+            }
+            else
+            {
+                s_ceilingFailStreak = 0;
             }
         }
 
@@ -643,11 +665,16 @@ namespace OstronautsOptimizer
                     {
                         long lh = MonoGCHeapSize();
                         long lu = MonoGCUsedSize();
+                        long eCeil = s_effectiveCeilingMB > 0
+                            ? s_effectiveCeilingMB
+                            : CfgMemCeilingMB.Value;
                         SB.Append(" cur:")
                             .Append(lh / 1048576)
                             .Append("/")
-                            .Append(CfgMemCeilingMB.Value)
+                            .Append(eCeil)
                             .Append("MB");
+                        if (s_effectiveCeilingMB > 0)
+                            SB.Append("(auto)");
                     }
                     catch {}
                 }
