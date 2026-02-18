@@ -495,7 +495,7 @@ namespace OstronautsOptimizer
             bool paused = false;
             try
             {
-                if (f_fTimeCoeffPause != null)
+                if ((object)f_fTimeCoeffPause != null)
                     paused = (float)f_fTimeCoeffPause
                         .GetValue(null) == 0f;
             }
@@ -539,7 +539,7 @@ namespace OstronautsOptimizer
                     CrewSim cs = UnityEngine.Object
                         .FindObjectOfType<CrewSim>();
                     if (cs != null &&
-                        f_finishedLoading != null)
+                        (object)f_finishedLoading != null)
                         loaded = (bool)f_finishedLoading
                             .GetValue(cs);
                 }
@@ -991,7 +991,7 @@ namespace OstronautsOptimizer
                 return true;
             try
             {
-                var list = f_list != null ?
+                var list = (object)f_list != null ?
                     f_list.GetValue(__instance)
                         as IList : null;
                 __result = (list != null &&
@@ -1055,7 +1055,7 @@ namespace OstronautsOptimizer
                 OptimizerPlugin.cIAcache++;
                 return false;
             }
-            IDictionary dict = f_dict != null ?
+            IDictionary dict = (object)f_dict != null ?
                 f_dict.GetValue(null) as IDictionary
                 : null;
             if (dict != null &&
