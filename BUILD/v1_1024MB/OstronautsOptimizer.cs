@@ -243,6 +243,37 @@ namespace OstronautsOptimizer
                 {
                     s_heapExpanded = true;
                     ExpandHeap(CfgHeapExpansionMB.Value);
+                    // Pre-check: if heap is already above
+                    // ceiling after expansion, raise
+                    // ceiling immediately to avoid useless
+                    // forced GC attempts (Boehm can't
+                    // compact so those would just lag)
+                    if (s_pinvokeOk &&
+                        CfgMemCeilingMB.Value > 0)
+                    {
+                        try
+                        {
+                            long hMB = MonoGCHeapSize()
+                                / 1048576;
+                            int ceil =
+                                CfgMemCeilingMB.Value;
+                            if (hMB > ceil)
+                            {
+                                s_effectiveCeilingMB =
+                                    hMB + 512;
+                                Log.LogInfo(
+                                    "[GC-CEIL] Heap " +
+                                    hMB +
+                                    "MB already above " +
+                                    "ceiling " + ceil +
+                                    "MB after expansion" +
+                                    ". Pre-raising to " +
+                                    s_effectiveCeilingMB +
+                                    "MB");
+                            }
+                        }
+                        catch {}
+                    }
                 }
             }
 
