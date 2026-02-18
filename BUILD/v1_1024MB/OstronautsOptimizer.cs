@@ -1,8 +1,10 @@
-// OstronautsOptimizer v7.5.0 — Heap Pre-Expansion to reduce GC frequency
+// OstronautsOptimizer v8.0.0 — Heap Pre-Expansion + Memory Ceiling
 // Key insight: Boehm GC stop-the-world ~800ms on 2.3GB heap every ~5s
 // because free space is only 3-28MB and alloc rate is ~5MB/s.
 // Solution: after load, allocate+free ~256MB to permanently expand heap.
 // Result: GC free space ~256MB → GC every ~50s instead of 5s.
+// v8.0: Added memory ceiling to prevent unbounded heap growth (7GB+ leak).
+//   Periodic forced GC when heap exceeds ceiling or free space is too low.
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -19,7 +21,7 @@ using UnityEngine;
 namespace OstronautsOptimizer
 {
     [BepInPlugin("com.perf.ostranauts.optimizer",
-        "Ostranauts Performance Optimizer", "7.5.0")]
+        "Ostranauts Performance Optimizer", "8.0.0")]
     public class OptimizerPlugin : BaseUnityPlugin
     {
         internal static ManualLogSource Log;
@@ -30,6 +32,15 @@ namespace OstronautsOptimizer
         internal static ConfigEntry<int> CfgMaxSimSteps;
         internal static ConfigEntry<float> CfgMaxDeltaTime;
         internal static ConfigEntry<int> CfgHeapExpansionMB;
+        internal static ConfigEntry<int> CfgMemCeilingMB;
+        internal static ConfigEntry<int> CfgGCIntervalSec;
+        internal static ConfigEntry<int> CfgMinFreeMB;
+
+        // GC ceiling state
+        private static float s_lastForcedGC = 0f;
+        private static int s_forcedGCCount = 0;
+        private static long s_lastHeapAfterGC = 0;
+        private static bool s_ceilingWarned = false;
 
         // P/Invoke for Mono GC diagnostics
         [DllImport("mono", EntryPoint="mono_gc_get_heap_size")]
@@ -114,6 +125,25 @@ namespace OstronautsOptimizer
                 "0=disabled. 256=moderate (GC every ~25s). " +
                 "512=good (GC every ~50s). " +
                 "1024=default (GC every ~100s).");
+            CfgMemCeilingMB = Config.Bind("GC",
+                "MemCeilingMB", 3072,
+                "Max allowed heap size in MB. When exceeded, " +
+                "forced GC runs to reclaim memory. " +
+                "Prevents unbounded heap growth (7GB+ leak). " +
+                "0=disabled. 2048=aggressive. " +
+                "3072=balanced (default). 4096=relaxed.");
+            CfgGCIntervalSec = Config.Bind("GC",
+                "GCIntervalSec", 120,
+                "Min seconds between forced GC runs. " +
+                "Lower=more responsive but more pauses. " +
+                "0=disabled periodic GC. 60=aggressive. " +
+                "120=default. 300=relaxed.");
+            CfgMinFreeMB = Config.Bind("GC",
+                "MinFreeMB", 256,
+                "If free heap space drops below this, " +
+                "force GC even before interval expires. " +
+                "Keeps a cushion of free memory. " +
+                "0=disabled. 128=tight. 256=default.");
 
             if (CfgMaxDeltaTime.Value > 0f)
             {
@@ -172,7 +202,7 @@ namespace OstronautsOptimizer
                 }
             }
 
-            Log.LogInfo("=== Optimizer v7.5.0 (" +
+            Log.LogInfo("=== Optimizer v8.0.0 (" +
                 ok + "/" + patches.Length + " patches) ===");
             Log.LogInfo("  FirstOrDefault=" +
                 CfgFirstOrDefault.Value +
@@ -182,7 +212,13 @@ namespace OstronautsOptimizer
                 " MaxSimSteps=" + CfgMaxSimSteps.Value +
                 " MaxDeltaTime=" + CfgMaxDeltaTime.Value +
                 " HeapExpansion=" +
-                CfgHeapExpansionMB.Value + "MB");
+                CfgHeapExpansionMB.Value + "MB" +
+                " MemCeiling=" +
+                CfgMemCeilingMB.Value + "MB" +
+                " GCInterval=" +
+                CfgGCIntervalSec.Value + "s" +
+                " MinFree=" +
+                CfgMinFreeMB.Value + "MB");
         }
 
         private void Update()
@@ -205,6 +241,112 @@ namespace OstronautsOptimizer
                     s_heapExpanded = true;
                     ExpandHeap(CfgHeapExpansionMB.Value);
                 }
+            }
+
+            // === MEMORY CEILING: prevent unbounded growth ===
+            if (GameLoaded && s_heapExpanded &&
+                s_pinvokeOk)
+            {
+                CheckMemoryCeiling();
+            }
+        }
+
+        /// <summary>
+        /// Monitor heap size and force GC when:
+        /// 1) Heap exceeds ceiling (e.g. 3072MB)
+        /// 2) Free space drops below minimum (e.g. 256MB)
+        /// 3) Periodic interval expires (e.g. 120s)
+        /// This prevents the 7GB+ leak seen in long sessions.
+        /// </summary>
+        private void CheckMemoryCeiling()
+        {
+            float now = Time.realtimeSinceStartup;
+            float elapsed = now - s_lastForcedGC;
+
+            // Don't check too frequently (min 10s between)
+            if (elapsed < 10f) return;
+
+            long heap = 0, used = 0, free = 0;
+            try
+            {
+                heap = MonoGCHeapSize();
+                used = MonoGCUsedSize();
+                free = heap - used;
+            }
+            catch { return; }
+
+            long heapMB = heap / 1048576;
+            long freeMB = free / 1048576;
+            int ceiling = CfgMemCeilingMB.Value;
+            int minFree = CfgMinFreeMB.Value;
+            int interval = CfgGCIntervalSec.Value;
+
+            bool shouldGC = false;
+            string reason = "";
+
+            // Trigger 1: heap exceeds ceiling
+            if (ceiling > 0 && heapMB > ceiling)
+            {
+                shouldGC = true;
+                reason = "CEILING(" + heapMB + ">" +
+                    ceiling + "MB)";
+            }
+            // Trigger 2: free space too low
+            else if (minFree > 0 && freeMB < minFree &&
+                elapsed >= 30f)
+            {
+                shouldGC = true;
+                reason = "LOW_FREE(" + freeMB + "<" +
+                    minFree + "MB)";
+            }
+            // Trigger 3: periodic interval
+            else if (interval > 0 && elapsed >= interval)
+            {
+                shouldGC = true;
+                reason = "PERIODIC(" +
+                    elapsed.ToString("F0") + "s)";
+            }
+
+            if (!shouldGC) return;
+
+            // Execute forced GC
+            long hBefore = heap;
+            long uBefore = used;
+
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
+            GC.Collect();
+
+            long hAfter = MonoGCHeapSize();
+            long uAfter = MonoGCUsedSize();
+            long fAfter = hAfter - uAfter;
+            long reclaimed = uBefore - uAfter;
+
+            s_lastForcedGC = now;
+            s_forcedGCCount++;
+            s_lastHeapAfterGC = hAfter;
+
+            Log.LogInfo("[GC-CEIL] #" + s_forcedGCCount +
+                " " + reason +
+                " H:" + (hBefore / 1048576) + ">" +
+                (hAfter / 1048576) + "MB" +
+                " U:" + (uBefore / 1048576) + ">" +
+                (uAfter / 1048576) + "MB" +
+                " Free:" + (fAfter / 1048576) + "MB" +
+                " Reclaimed:" + (reclaimed / 1048576) +
+                "MB");
+
+            // Warning: if GC reclaimed less than 10%
+            // it means objects are genuinely live
+            if (reclaimed < uBefore / 10 &&
+                heapMB > ceiling && !s_ceilingWarned)
+            {
+                s_ceilingWarned = true;
+                Log.LogWarning(
+                    "[GC-CEIL] Low reclaim rate! " +
+                    "Most objects are live. " +
+                    "Consider increasing MemCeilingMB " +
+                    "or this is a game-side leak.");
             }
         }
 
@@ -488,6 +630,28 @@ namespace OstronautsOptimizer
             if (s_heapExpandResult.Length > 0)
                 SB.Append("\n  Heap: ")
                     .Append(s_heapExpandResult);
+
+            // GC ceiling status
+            if (s_forcedGCCount > 0)
+            {
+                SB.Append("\n  GC-Ceil: ")
+                    .Append(s_forcedGCCount)
+                    .Append("x forced");
+                if (s_pinvokeOk)
+                {
+                    try
+                    {
+                        long lh = MonoGCHeapSize();
+                        long lu = MonoGCUsedSize();
+                        SB.Append(" cur:")
+                            .Append(lh / 1048576)
+                            .Append("/")
+                            .Append(CfgMemCeilingMB.Value)
+                            .Append("MB");
+                    }
+                    catch {}
+                }
+            }
 
             SB.Append("\n=================");
             Log.LogInfo(SB.ToString());
